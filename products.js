@@ -37,7 +37,7 @@ window.PRODUCTS = [
     {
         "id":  "audifonos-tws",
         "folderName":  "Audifonos TWS",
-        "title":  "🎧 Audífonos Inalámbricos Bluetooth TWS Edición Superhéroes - ¡Nuevos! 🎧",
+        "title":  "Audífonos Inalámbricos Bluetooth TWS Edición Superhéroes - ¡Nuevos!",
         "price":  12,
         "originalPrice":  15,
         "category":  "Electrónicos",

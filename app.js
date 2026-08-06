@@ -336,9 +336,9 @@ document.addEventListener('DOMContentLoaded', () => {
             let message = `Hola! Me interesa obtener más información sobre el producto:\n\n`;
             message += `*${product.title}*\n`;
             message += `Precio: *$${product.price.toFixed(2)}*\n\n`;
-            message += `🔗 Ver en catálogo: ${prodLink}\n`;
+            message += `Ver en catálogo: ${prodLink}\n`;
             if (imgUrl) {
-                message += `📷 Foto del producto: ${imgUrl}\n`;
+                message += `Foto del producto: ${imgUrl}\n`;
             }
             
             const encodedText = encodeURIComponent(message);
@@ -520,8 +520,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const imgUrl = new URL(item.image, baseUrl).href;
             
             message += `${index + 1}. *${item.title}* (Cant: ${item.qty}) - $${item.price.toFixed(2)} c/u | Subtotal: *$${subtotal.toFixed(2)}*\n`;
-            message += `🔗 Producto: ${prodLink}\n`;
-            message += `📷 Foto: ${imgUrl}\n\n`;
+            message += `Producto: ${prodLink}\n`;
+            message += `Foto: ${imgUrl}\n\n`;
         });
 
         const totalCost = state.cart.reduce((acc, curr) => acc + (curr.price * curr.qty), 0);
