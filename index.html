@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catálogo online de productos en Punto Clave. Compra fácil y rápido coordinando directamente por WhatsApp.">
+    
+    <!-- Open Graph / Meta Tags para compartir en WhatsApp y Redes Sociales -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Punto Clave - Tienda Online">
+    <meta property="og:description" content="Catálogo online de productos en Punto Clave. Compra fácil y rápido coordinando directamente por WhatsApp.">
+    <!-- Nota: WhatsApp requiere ruta absoluta una vez en internet, ej. https://tuusuario.github.io/repo/tienda/thumbnail.png -->
+    <meta property="og:image" content="thumbnail.png">
+    
+    <title>Punto Clave - Tienda Online</title>
+    <!-- Google Fonts: Outfit & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Estilos -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-theme">
+    <!-- Fondo decorativo con gradientes suaves de luz -->
+    <div class="glow-bg glow-1"></div>
+    <div class="glow-bg glow-2"></div>
+
+    <!-- Encabezado / Barra de Navegación -->
+    <header class="main-header glass-effect">
+        <div class="header-container">
+            <div class="logo-area">
+                <svg class="store-logo" viewBox="0 0 100 100" width="36" height="36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="purple-logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#4e1b80" />
+                            <stop offset="50%" stop-color="#732599" />
+                            <stop offset="100%" stop-color="#9535bf" />
+                        </linearGradient>
+                        <linearGradient id="gold-logo-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#ffd54f" />
+                            <stop offset="50%" stop-color="#ffb300" />
+                            <stop offset="100%" stop-color="#ff8f00" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M50 90C43.5 90 20 61.5 20 42C20 25.4 33.4 12 50 12C66.6 12 80 25.4 80 42C80 61.5 56.5 90 50 90Z" fill="url(#purple-logo-grad)" stroke="url(#gold-logo-grad)" stroke-width="3" stroke-linejoin="round"/>
+                    <circle cx="50" cy="42" r="18" fill="var(--glass-bg)" stroke="url(#gold-logo-grad)" stroke-width="2"/>
+                    <path d="M41 30V56" stroke="url(#gold-logo-grad)" stroke-width="4" stroke-linecap="round"/>
+                    <circle cx="50" cy="38" r="4.5" fill="url(#gold-logo-grad)" />
+                    <polygon points="47.5 40 52.5 40 54.5 50 45.5 50" fill="url(#gold-logo-grad)" />
+                </svg>
+                <div class="logo-text">
+                    <h1 id="store-title" class="store-name">Cargando...</h1>
+                    <span class="store-subtitle">EL SALVADOR</span>
+                </div>
+            </div>
+            
+            <div class="header-actions">
+                <!-- Enlace de Contacto -->
+                <a href="#contacto" class="contact-header-link">Contacto</a>
+                <!-- Selector de Tema -->
+                <button id="theme-toggle" class="icon-btn" aria-label="Cambiar tema">
+                    <svg class="sun-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y3="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </button>
+                
+                <!-- Botón Carrito Flotante Cabecera -->
+                <button id="cart-toggle" class="cart-btn glass-effect" aria-label="Ver carrito">
+                    <div class="cart-icon-wrapper">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                        <span id="cart-badge" class="cart-badge">0</span>
+                    </div>
+                    <span class="cart-total-header">$0.00</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <!-- Panel de Búsqueda y Filtros -->
+        <section class="filter-section glass-effect" id="filters-container">
+            <div class="search-box">
+                <svg class="search-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <input type="text" id="search-input" placeholder="Buscar por nombre o descripción..." aria-label="Buscar productos">
+                <button id="clear-search" class="clear-btn" style="display: none;" aria-label="Limpiar búsqueda">✕</button>
+            </div>
+
+            <!-- Categorías (Renderizado dinámico) -->
+            <div class="categories-wrapper">
+                <div class="categories-scroll" id="categories-container">
+                    <!-- Se inyectarán dinámicamente aquí -->
+                </div>
+            </div>
+
+            <!-- Filtros secundarios -->
+            <div class="secondary-filters">
+                <div class="checkbox-filter">
+                    <label class="switch-container">
+                        <input type="checkbox" id="stock-filter">
+                        <span class="switch-slider"></span>
+                    </label>
+                    <span class="filter-label">Mostrar solo disponibles</span>
+                </div>
+                <div class="sort-filter">
+                    <label for="sort-select">Ordenar por:</label>
+                    <select id="sort-select" class="glass-select">
+                        <option value="default">Más recientes primero</option>
+                        <option value="price-asc">Menor precio primero</option>
+                        <option value="price-desc">Mayor precio primero</option>
+                        <option value="name-asc">Nombre A-Z</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <!-- Listado de Productos -->
+        <section class="products-section">
+            <div class="section-header">
+                <h2 id="results-count" class="section-title">Todos los productos</h2>
+            </div>
+            
+            <div id="products-grid" class="products-grid">
+                <!-- Los productos se inyectarán aquí dinámicamente -->
+                <div class="loading-state">
+                    <div class="spinner"></div>
+                    <p>Cargando productos...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Contacto -->
+        <section id="contacto" class="contact-section glass-effect">
+            <div class="contact-grid">
+                <!-- Columna de Información -->
+                <div class="contact-info-col">
+                    <h2 class="contact-title">Contáctanos</h2>
+                    <p class="contact-subtitle">Estamos listos para ayudarte. Escríbenos, llámanos o visítanos en nuestro local.</p>
+                    
+                    <div class="contact-details">
+                        <!-- Ubicación -->
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            </div>
+                            <div class="contact-item-text">
+                                <h4>Ubicación</h4>
+                                <p>Mercado de Chalchuapa, Terraza Local 828h</p>
+                            </div>
+                        </div>
+
+                        <!-- Teléfono -->
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            </div>
+                            <div class="contact-item-text">
+                                <h4>Teléfono</h4>
+                                <p><a href="tel:+50376172548" class="contact-link">+503 7617-2548</a></p>
+                            </div>
+                        </div>
+
+                        <!-- Correo Electrónico -->
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            </div>
+                            <div class="contact-item-text">
+                                <h4>Correo Electrónico</h4>
+                                <p><a href="mailto:puntoclave.sv@gmail.com" class="contact-link">puntoclave.sv@gmail.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna de Envíos -->
+                <div class="contact-shipping-col">
+                    <div class="shipping-card glass-effect">
+                        <div class="shipping-header">
+                            <div class="shipping-icon-bg">
+                                <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                            </div>
+                            <h3 class="shipping-title">Políticas de Envío</h3>
+                        </div>
+                        <ul class="shipping-list">
+                            <li>
+                                <span class="shipping-highlight">📍 Ciudad Real (Santa Ana)</span>
+                                <p><strong>Servicio a domicilio totalmente gratis</strong> en toda el área residencial.</p>
+                            </li>
+                            <li>
+                                <span class="shipping-highlight">🚚 Envíos Nacionales</span>
+                                <p>Envíos a domicilio a otros municipios y departamentos por un costo adicional (a coordinar según distancia).</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal de Detalle de Producto -->
+    <div id="product-modal" class="modal-overlay" aria-hidden="true" style="display: none;">
+        <div class="modal-container glass-effect">
+            <button id="modal-close" class="modal-close-btn" aria-label="Cerrar modal">✕</button>
+            
+            <div class="modal-content">
+                <!-- Columna de Imágenes -->
+                <div class="modal-gallery">
+                    <div class="slider-wrapper">
+                        <div id="modal-slider" class="image-slider">
+                            <!-- Imágenes cargadas dinámicamente -->
+                        </div>
+                        <button id="prev-img" class="slider-btn prev" aria-label="Imagen anterior">&#10094;</button>
+                        <button id="next-img" class="slider-btn next" aria-label="Siguiente imagen">&#10095;</button>
+                    </div>
+                    <!-- Puntos del slider -->
+                    <div id="slider-dots" class="slider-dots"></div>
+                </div>
+
+                <!-- Columna de Detalles -->
+                <div class="modal-info">
+                    <div class="tags-row">
+                        <span id="modal-category" class="badge badge-category">Categoría</span>
+                        <span id="modal-condition" class="badge badge-condition">Condición</span>
+                        <span id="modal-availability" class="badge">Estado</span>
+                    </div>
+
+                    <h2 id="modal-title" class="product-modal-title">Título del Producto</h2>
+                    
+                    <div class="price-row">
+                        <span id="modal-price" class="product-modal-price">$0.00</span>
+                        <span id="modal-original-price" class="product-modal-original-price">$0.00</span>
+                    </div>
+
+                    <div class="description-container">
+                        <h3>Descripción</h3>
+                        <p id="modal-description" class="product-modal-description">Cargando...</p>
+                    </div>
+
+                    <div class="modal-actions">
+                        <button id="modal-add-to-cart" class="btn btn-primary btn-grow">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                            <span>Añadir al carrito</span>
+                        </button>
+                        <button id="modal-whatsapp-direct" class="btn btn-whatsapp">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.717-1.458L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.42 9.864-9.852.002-2.631-1.019-5.105-2.876-6.964C16.583 1.93 14.113.91 11.487.91c-5.442 0-9.866 4.418-9.87 9.852 0 1.714.455 3.39 1.317 4.877L1.93 21.085l5.854-1.53c-.56-.322-1.123-.646-1.137-.661zm13.155-8.232c-.302-.151-1.791-.884-2.067-.984-.277-.101-.478-.151-.68.151-.202.302-.782.984-.959 1.185-.176.202-.352.226-.654.076-.301-.15-1.272-.469-2.423-1.496-.895-.798-1.5-1.783-1.676-2.084-.176-.302-.019-.465.132-.614.135-.134.302-.352.453-.528.151-.176.202-.302.302-.503.101-.202.05-.377-.025-.528-.076-.151-.68-1.637-.932-2.24-.247-.591-.497-.512-.68-.521-.176-.008-.377-.01-.578-.01-.201 0-.528.075-.804.377-.277.302-1.057 1.03-1.057 2.512 0 1.482 1.081 2.915 1.231 3.117.151.202 2.129 3.251 5.158 4.561.72.312 1.282.499 1.72.639.723.23 1.381.197 1.901.12.579-.086 1.791-.733 2.042-1.442.252-.709.252-1.316.176-1.442-.075-.127-.276-.201-.578-.352z"/></svg>
+                            <span>Preguntar</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cajón lateral del Carrito (Drawer) -->
+    <div id="cart-drawer" class="cart-drawer-overlay" style="display: none;">
+        <div class="cart-drawer glass-effect">
+            <div class="cart-drawer-header">
+                <h3>Tu Pedido</h3>
+                <button id="cart-close" class="close-drawer-btn" aria-label="Cerrar carrito">✕</button>
+            </div>
+
+            <!-- Listado de items en el carrito -->
+            <div id="cart-items" class="cart-drawer-items">
+                <!-- Se inyectarán dinámicamente -->
+                <div class="empty-cart-state">
+                    <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                    <p>Tu carrito está vacío</p>
+                    <button id="start-shopping" class="btn btn-secondary btn-sm">Explorar catálogo</button>
+                </div>
+            </div>
+
+            <!-- Resumen y Checkout -->
+            <div class="cart-drawer-footer">
+                <div class="cart-summary-row">
+                    <span>Subtotal:</span>
+                    <span id="cart-subtotal">$0.00</span>
+                </div>
+                <div class="cart-summary-row total">
+                    <span>Total del Pedido:</span>
+                    <span id="cart-total-footer">$0.00</span>
+                </div>
+                <p class="whatsapp-note">✓ Al enviar el pedido se abrirá WhatsApp con el listado detallado para que coordines el pago y la entrega.</p>
+                <button id="cart-checkout" class="btn btn-whatsapp btn-full btn-grow">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.717-1.458L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.42 9.864-9.852.002-2.631-1.019-5.105-2.876-6.964C16.583 1.93 14.113.91 11.487.91c-5.442 0-9.866 4.418-9.87 9.852 0 1.714.455 3.39 1.317 4.877L1.93 21.085l5.854-1.53c-.56-.322-1.123-.646-1.137-.661zm13.155-8.232c-.302-.151-1.791-.884-2.067-.984-.277-.101-.478-.151-.68.151-.202.302-.782.984-.959 1.185-.176.202-.352.226-.654.076-.301-.15-1.272-.469-2.423-1.496-.895-.798-1.5-1.783-1.676-2.084-.176-.302-.019-.465.132-.614.135-.134.302-.352.453-.528.151-.176.202-.302.302-.503.101-.202.05-.377-.025-.528-.076-.151-.68-1.637-.932-2.24-.247-.591-.497-.512-.68-.521-.176-.008-.377-.01-.578-.01-.201 0-.528.075-.804.377-.277.302-1.057 1.03-1.057 2.512 0 1.482 1.081 2.915 1.231 3.117.151.202 2.129 3.251 5.158 4.561.72.312 1.282.499 1.72.639.723.23 1.381.197 1.901.12.579-.086 1.791-.733 2.042-1.442.252-.709.252-1.316.176-1.442-.075-.127-.276-.201-.578-.352z"/></svg>
+                    <span>Enviar Pedido a WhatsApp</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notificación Toast flotante -->
+    <div id="toast" class="toast-notification" style="display: none;">
+        <span id="toast-message">Producto añadido al carrito</span>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <p>&copy; <span id="footer-year"></span> <span id="footer-store-name">Punto Clave</span>. Creado para coordinar pedidos por WhatsApp.</p>
+        <p class="footer-meta">Todos los derechos reservados. Santa Ana, El Salvador.</p>
+    </footer>
+
+    <!-- Cargar base de datos e interactividad -->
+    <script src="products.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
