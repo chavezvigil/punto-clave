@@ -46,8 +46,6 @@ window.PRODUCTS = [
         "date":  "2026-08-06",
         "description":  "✨ ¡Lleva tu música a todos lados con el mejor estilo de Capitán América, Spider-Man e Iron Man! ✨\n\n🔥 PRECIO ESPECIAL DE OFERTA: $12.00\n\n.\n\n🌟 Características Destacadas:\n📶 Bluetooth V5.3: Conexión ultra rápida, estable y de bajo consumo de energía.\n🔊 Sonido Stereo HD \u0026 Pure Bass: Graves potentes y sonido claro para música y llamadas.\n🎨 Diseños Exclusivos: Estuches impresos con tus personajes favoritos.\n🔋 Estuche de Carga Portátil: Incluye cable de carga rápida para mayor autonomía.\n🔕 Ajuste Cómodo e In-Ear: Almohadillas suaves para uso prolongado sin molestias.\n\n.\n\n📍 UBICACIÓN Y ENTREGAS:\n\n🏠 Punto de Venta: Mercado de Chalchuapa, Área de Terraza, Local #828H.\n📍 Punto Clave El Salvador\n\n.\n\n🚚 OPCIONES DE ENVÍO:\n✅ ¡ENTREGA A DOMICILIO GRATIS! en todo Ciudad Real, Santa Ana.\n🚛 Envíos a otros municipios/sectores: Disponibles con costo adicional.",
         "images":  [
-                       "productos/Audifonos%20TWS/20260806_113340.jpg",
-                       "productos/Audifonos%20TWS/20260806_113346.jpg",
                        "productos/Audifonos%20TWS/20260806_113429.jpg",
                        "productos/Audifonos%20TWS/20260806_113432.jpg",
                        "productos/Audifonos%20TWS/20260806_113438.jpg",
