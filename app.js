@@ -329,8 +329,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Botón de WhatsApp Directo
         modalWhatsappDirect.onclick = () => {
-            const prodLink = new URL(`?prod=${product.id}`, window.location.href).href;
-            const imgUrl = product.images.length > 0 ? new URL(product.images[0], window.location.href).href : '';
+            const baseUrl = window.location.protocol === 'file:' ? 'https://chavezvigil.github.io/punto-clave/' : window.location.href;
+            const prodLink = new URL(`?prod=${product.id}`, baseUrl).href;
+            const imgUrl = product.images.length > 0 ? new URL(product.images[0], baseUrl).href : '';
             
             let message = `Hola! Me interesa obtener más información sobre el producto:\n\n`;
             message += `*${product.title}*\n`;
@@ -509,13 +510,14 @@ document.addEventListener('DOMContentLoaded', () => {
         if (state.cart.length === 0) return;
 
         let message = `Hola *${window.STORE_INFO.storeName}*, me gustaría realizar el siguiente pedido:\n\n`;
+        const baseUrl = window.location.protocol === 'file:' ? 'https://chavezvigil.github.io/punto-clave/' : window.location.href;
         
         state.cart.forEach((item, index) => {
             const subtotal = item.price * item.qty;
             
             // Generar ruta absoluta del producto y la foto
-            const prodLink = new URL(`?prod=${item.id}`, window.location.href).href;
-            const imgUrl = new URL(item.image, window.location.href).href;
+            const prodLink = new URL(`?prod=${item.id}`, baseUrl).href;
+            const imgUrl = new URL(item.image, baseUrl).href;
             
             message += `${index + 1}. *${item.title}* (Cant: ${item.qty}) - $${item.price.toFixed(2)} c/u | Subtotal: *$${subtotal.toFixed(2)}*\n`;
             message += `🔗 Producto: ${prodLink}\n`;
