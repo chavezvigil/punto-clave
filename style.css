@@ -161,6 +161,9 @@ h1, h2, h3, h4, .store-badge {
     display: flex;
     align-items: center;
     gap: 0.8rem;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
 }
 
 .store-logo {
