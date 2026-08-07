@@ -264,6 +264,16 @@ document.addEventListener('DOMContentLoaded', () => {
         state.currentProductModal = product;
         state.currentSliderIndex = 0;
 
+        // Registrar vista de producto en Google Analytics
+        if (typeof gtag === 'function') {
+            gtag('event', 'ver_producto', {
+                'id_producto': product.id,
+                'nombre_producto': product.title,
+                'categoria': product.category,
+                'precio': product.price
+            });
+        }
+
         // Cargar datos
         modalTitle.textContent = product.title;
         modalDescription.textContent = product.description;
@@ -341,6 +351,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 message += `Foto del producto: ${imgUrl}\n`;
             }
             
+            // Registrar consulta directa en Google Analytics
+            if (typeof gtag === 'function') {
+                gtag('event', 'preguntar_producto_whatsapp', {
+                    'id_producto': product.id,
+                    'nombre_producto': product.title,
+                    'precio': product.price
+                });
+            }
+
             const encodedText = encodeURIComponent(message);
             window.open(`https://wa.me/${window.STORE_INFO.whatsappNumber}?text=${encodedText}`, '_blank');
         };
@@ -528,6 +547,14 @@ document.addEventListener('DOMContentLoaded', () => {
         message += `*Total del Pedido: $${totalCost.toFixed(2)}*\n\n`;
         message += `Por favor, confírmame la disponibilidad para coordinar la entrega y el pago. Gracias!`;
 
+        // Registrar envío de pedido en Google Analytics
+        if (typeof gtag === 'function') {
+            gtag('event', 'enviar_pedido_whatsapp', {
+                'valor_total': totalCost,
+                'cantidad_items': state.cart.reduce((acc, curr) => acc + curr.qty, 0)
+            });
+        }
+
         const encodedText = encodeURIComponent(message);
         window.open(`https://wa.me/${window.STORE_INFO.whatsappNumber}?text=${encodedText}`, '_blank');
         
@@ -597,7 +624,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Controles de Slider en Modal
+        // Controles de Slider en Modal (Clic)
         prevImgBtn.addEventListener('click', () => {
             window.setSliderIndex(state.currentSliderIndex - 1);
         });
@@ -605,6 +632,42 @@ document.addEventListener('DOMContentLoaded', () => {
         nextImgBtn.addEventListener('click', () => {
             window.setSliderIndex(state.currentSliderIndex + 1);
         });
+
+        // Soporte para gestos táctiles (Swipe) en móvil para cambiar imágenes
+        let touchStartX = 0;
+        let touchEndX = 0;
+        let touchStartY = 0;
+        let touchEndY = 0;
+
+        modalSlider.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+            touchStartY = e.changedTouches[0].screenY;
+        }, { passive: true });
+
+        modalSlider.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            touchEndY = e.changedTouches[0].screenY;
+            handleSliderSwipe();
+        }, { passive: true });
+
+        function handleSliderSwipe() {
+            const diffX = touchEndX - touchStartX;
+            const diffY = touchEndY - touchStartY;
+
+            // Verificar que el desplazamiento fue horizontal preponderantemente
+            if (Math.abs(diffX) > Math.abs(diffY)) {
+                // Umbral de 40px para evitar toques accidentales
+                if (Math.abs(diffX) > 40) {
+                    if (diffX > 0) {
+                        // Deslizar a la derecha -> Imagen anterior
+                        window.setSliderIndex(state.currentSliderIndex - 1);
+                    } else {
+                        // Deslizar a la izquierda -> Imagen siguiente
+                        window.setSliderIndex(state.currentSliderIndex + 1);
+                    }
+                }
+            }
+        }
 
         // Agregar al carrito desde modal
         modalAddToCartBtn.addEventListener('click', () => {
@@ -679,6 +742,13 @@ document.addEventListener('DOMContentLoaded', () => {
             waFloat.addEventListener('mouseenter', () => {
                 waTooltip.classList.remove('show-initially');
                 localStorage.setItem('wa_interacted', 'true');
+            });
+
+            // Registrar clic en WhatsApp flotante en Google Analytics
+            waFloat.addEventListener('click', () => {
+                if (typeof gtag === 'function') {
+                    gtag('event', 'click_whatsapp_flotante');
+                }
             });
         }
 
