@@ -1565,6 +1565,10 @@ h1, h2, h3, h4, .store-badge {
 
 /* Responsividad para la sección de contacto */
 @media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
     .contact-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
