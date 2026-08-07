@@ -641,6 +641,52 @@ document.addEventListener('DOMContentLoaded', () => {
                 showToast('Tema oscuro activado');
             }
         });
+
+        // --- LÓGICA DE BOTONES FLOTANTES: SUBIR Y WHATSAPP ---
+        const scrollTopBtn = document.getElementById('scroll-to-top');
+        const waTooltip = document.querySelector('.whatsapp-tooltip');
+        const waFloat = document.getElementById('whatsapp-float');
+
+        // Mostrar/Ocultar botón de subir y quitar tooltip al hacer scroll
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+            if (waTooltip) {
+                waTooltip.classList.remove('show-initially');
+            }
+        }, { passive: true });
+
+        // Clic para subir suavemente
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Mostrar el tooltip de ayuda a los 3 segundos de carga
+        if (waTooltip && waFloat) {
+            setTimeout(() => {
+                if (!localStorage.getItem('wa_interacted')) {
+                    waTooltip.classList.add('show-initially');
+                }
+            }, 3000);
+
+            // Guardar interacción para no molestar más adelante
+            waFloat.addEventListener('mouseenter', () => {
+                waTooltip.classList.remove('show-initially');
+                localStorage.setItem('wa_interacted', 'true');
+            });
+        }
+
+        // Configurar redirección dinámica del formulario de contacto
+        const redirectInput = document.getElementById('form-redirect');
+        if (redirectInput) {
+            redirectInput.value = window.location.href.split('#')[0].split('?')[0];
+        }
     }
 
     // Inicializar todo
