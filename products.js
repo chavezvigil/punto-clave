@@ -145,7 +145,7 @@ window.PRODUCTS = [
         "originalPrice":  null,
         "category":  "Juguetes",
         "condition":  "Usado - Buen estado",
-        "availability":  "Disponible",
+        "availability":  "Agotado",
         "date":  "2026-06-28",
         "description":  "¡Diversión para los pequeños con este clásico juguete Fisher-Price! 🚗✨ Estación de parqueo con rampas para jugar con carritos, estimular la imaginación y crear diferentes recorridos.\n\n🎯 Características:\n✓ Marca Fisher-Price\n✓ Diseño con varios niveles y rampa\n✓ Material plástico resistente y duradero\n✓ Ideal para juego infantil\n✓ Buen estado general, limpio y listo para usarse\n\nPerfecto para niños que disfrutan jugar con carros y crear sus propias aventuras.",
         "images":  [
