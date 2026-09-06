@@ -160,39 +160,53 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Intentar descargar products-config.json directamente desde GitHub API si hay Token
+    // Intentar descargar products-config.json directamente desde GitHub API o servidor
     async function tryFetchConfigFromGitHub() {
-        if (!adminSettings.token || !adminSettings.repo) return;
+        if (adminSettings.token && adminSettings.repo) {
+            try {
+                const res = await fetch(`https://api.github.com/repos/${adminSettings.repo}/contents/products-config.json?t=${Date.now()}`, {
+                    headers: {
+                        'Authorization': `token ${adminSettings.token}`,
+                        'Accept': 'application/vnd.github.v3+json'
+                    },
+                    cache: 'no-cache'
+                });
 
-        try {
-            const res = await fetch(`https://api.github.com/repos/${adminSettings.repo}/contents/products-config.json`, {
-                headers: {
-                    'Authorization': `token ${adminSettings.token}`,
-                    'Accept': 'application/vnd.github.v3+json'
-                }
-            });
-
-            if (res.ok) {
-                const data = await res.json();
-                const decodedJson = JSON.parse(decodeURIComponent(escape(atob(data.content))));
-                if (decodedJson && decodedJson.products) {
-                    // Preservar las imágenes si la versión remota no las trae
-                    Object.keys(decodedJson.products).forEach(k => {
-                        if (!decodedJson.products[k].images || decodedJson.products[k].images.length === 0) {
-                            if (catalogConfig.products[k] && catalogConfig.products[k].images) {
-                                decodedJson.products[k].images = catalogConfig.products[k].images;
+                if (res.ok) {
+                    const data = await res.json();
+                    const decodedJson = JSON.parse(decodeURIComponent(escape(atob(data.content))));
+                    if (decodedJson && decodedJson.products) {
+                        Object.keys(decodedJson.products).forEach(k => {
+                            if (!decodedJson.products[k].images || decodedJson.products[k].images.length === 0) {
+                                if (catalogConfig.products[k] && catalogConfig.products[k].images) {
+                                    decodedJson.products[k].images = catalogConfig.products[k].images;
+                                }
                             }
-                        }
-                    });
-                    catalogConfig = decodedJson;
+                        });
+                        catalogConfig = decodedJson;
+                        if (catalogConfig.storeName) headerStoreName.textContent = catalogConfig.storeName;
+                        renderProductsList();
+                        console.log('✅ Configuración cargada en tiempo real desde GitHub.');
+                        return;
+                    }
+                }
+            } catch (err) {
+                console.warn('No se pudo actualizar config desde GitHub API:', err);
+            }
+        }
+
+        // Fallback Anti-Caché directo desde el servidor
+        try {
+            const rawRes = await fetch(`products-config.json?t=${Date.now()}`, { cache: 'no-cache' });
+            if (rawRes.ok) {
+                const rawConfig = await rawRes.json();
+                if (rawConfig && rawConfig.products) {
+                    catalogConfig = rawConfig;
                     if (catalogConfig.storeName) headerStoreName.textContent = catalogConfig.storeName;
                     renderProductsList();
-                    console.log('✅ Configuración cargada en tiempo real desde GitHub.');
                 }
             }
-        } catch (err) {
-            console.warn('No se pudo actualizar config desde GitHub API en el inicio:', err);
-        }
+        } catch (e) {}
     }
 
     // --- TAB 1: RENDERIZAR PRODUCTOS ---

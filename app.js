@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- ESTADO DE LA APLICACIÓN ---
     let state = {
-        products: window.PRODUCTS,
-        filteredProducts: [...window.PRODUCTS],
+        products: window.PRODUCTS || [],
+        filteredProducts: [...(window.PRODUCTS || [])],
         activeCategory: 'todos',
         searchQuery: '',
         onlyAvailable: false,
@@ -19,6 +19,43 @@ document.addEventListener('DOMContentLoaded', () => {
         currentProductModal: null,
         currentSliderIndex: 0
     };
+
+    // Refresco en tiempo real Anti-Caché desde GitHub Pages
+    async function fetchLiveCatalog() {
+        try {
+            const response = await fetch('products-config.json?t=' + Date.now(), { cache: 'no-cache' });
+            if (response.ok) {
+                const liveConfig = await response.json();
+                if (liveConfig && liveConfig.products) {
+                    const freshProducts = [];
+                    Object.entries(liveConfig.products).forEach(([folderName, p]) => {
+                        const id = folderName.replace(/\s+/g, '-').toLowerCase();
+                        freshProducts.push({
+                            id: id,
+                            folderName: folderName,
+                            title: p.title || folderName,
+                            price: p.price ?? 0,
+                            originalPrice: p.originalPrice ?? null,
+                            category: p.category || "Otros",
+                            condition: p.condition || "Usado - Buen estado",
+                            availability: p.availability || "Disponible",
+                            date: p.date || new Date().toISOString().split('T')[0],
+                            description: p.description || "",
+                            images: p.images || []
+                        });
+                    });
+                    if (freshProducts.length > 0) {
+                        state.products = freshProducts;
+                        renderCategories();
+                        applyFilters();
+                    }
+                }
+            }
+        } catch (e) {
+            // Si está offline o local file://, usa window.PRODUCTS por defecto
+        }
+    }
+    fetchLiveCatalog();
 
     // --- ELEMENTOS DEL DOM ---
     const storeTitleEl = document.getElementById('store-title');
