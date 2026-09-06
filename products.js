@@ -77,7 +77,7 @@ window.PRODUCTS = [
         "originalPrice":  null,
         "category":  "Juguetes",
         "condition":  "Usado - Buen estado",
-        "availability":  "Agotado",
+        "availability":  "Oculto",
         "date":  "2026-06-28",
         "description":  "Castillo de Princesa para Niñas – Casita de Juegos. ¡Ideal para horas de diversión e imaginación! Hermoso castillo infantil color rosa, perfecto para jugar dentro de casa o en el jardín.\n\n✓ Diseño de princesa con coronas y moño decorativo\n✓ Fácil de armar y desarmar\n✓ Liviano y práctico para guardar\n✓ Excelente estado, limpio y listo para usar\n✓ Espacio cómodo para juego infantil",
         "images":  [
@@ -99,7 +99,7 @@ window.PRODUCTS = [
         "originalPrice":  150,
         "category":  "Juguetes",
         "condition":  "Usado - Como nuevo",
-        "availability":  "Agotado",
+        "availability":  "Oculto",
         "date":  "2026-06-28",
         "description":  "Vendo columpio de madera de cedro, recién barnizado y muy bien cuidado. Madera resistente y de excelente calidad.\n\n✓ Estructura firme y duradera\n✓ Se puede destornillar fácilmente para transportar, guardar o instalar\n✓ Ideal para niños de 4 a 10 años\n✓ Perfecto para patio, jardín o terraza\n✓ Incluye 2 asientos\n✓ Listo para usar",
         "images":  [
@@ -145,7 +145,7 @@ window.PRODUCTS = [
         "originalPrice":  null,
         "category":  "Juguetes",
         "condition":  "Usado - Buen estado",
-        "availability":  "Agotado",
+        "availability":  "Oculto",
         "date":  "2026-06-28",
         "description":  "¡Diversión para los pequeños con este clásico juguete Fisher-Price! 🚗✨ Estación de parqueo con rampas para jugar con carritos, estimular la imaginación y crear diferentes recorridos.\n\n🎯 Características:\n✓ Marca Fisher-Price\n✓ Diseño con varios niveles y rampa\n✓ Material plástico resistente y duradero\n✓ Ideal para juego infantil\n✓ Buen estado general, limpio y listo para usarse\n\nPerfecto para niños que disfrutan jugar con carros y crear sus propias aventuras.",
         "images":  [

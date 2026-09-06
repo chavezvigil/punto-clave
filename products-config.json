@@ -33,7 +33,7 @@
                                       "originalPrice":  null,
                                       "category":  "Juguetes",
                                       "condition":  "Usado - Buen estado",
-                                      "availability":  "Agotado",
+                                      "availability":  "Oculto",
                                       "description":  "Castillo de Princesa para Niñas – Casita de Juegos. ¡Ideal para horas de diversión e imaginación! Hermoso castillo infantil color rosa, perfecto para jugar dentro de casa o en el jardín.\n\n✓ Diseño de princesa con coronas y moño decorativo\n✓ Fácil de armar y desarmar\n✓ Liviano y práctico para guardar\n✓ Excelente estado, limpio y listo para usar\n✓ Espacio cómodo para juego infantil",
                                       "date":  "2026-06-28",
                                       "images":  [
@@ -53,7 +53,7 @@
                                       "originalPrice":  150,
                                       "category":  "Juguetes",
                                       "condition":  "Usado - Como nuevo",
-                                      "availability":  "Agotado",
+                                      "availability":  "Oculto",
                                       "description":  "Vendo columpio de madera de cedro, recién barnizado y muy bien cuidado. Madera resistente y de excelente calidad.\n\n✓ Estructura firme y duradera\n✓ Se puede destornillar fácilmente para transportar, guardar o instalar\n✓ Ideal para niños de 4 a 10 años\n✓ Perfecto para patio, jardín o terraza\n✓ Incluye 2 asientos\n✓ Listo para usar",
                                       "date":  "2026-06-28",
                                       "images":  [
@@ -95,7 +95,7 @@
                                       "originalPrice":  null,
                                       "category":  "Juguetes",
                                       "condition":  "Usado - Buen estado",
-                                      "availability":  "Agotado",
+                                      "availability":  "Oculto",
                                       "description":  "¡Diversión para los pequeños con este clásico juguete Fisher-Price! 🚗✨ Estación de parqueo con rampas para jugar con carritos, estimular la imaginación y crear diferentes recorridos.\n\n🎯 Características:\n✓ Marca Fisher-Price\n✓ Diseño con varios niveles y rampa\n✓ Material plástico resistente y duradero\n✓ Ideal para juego infantil\n✓ Buen estado general, limpio y listo para usarse\n\nPerfecto para niños que disfrutan jugar con carros y crear sus propias aventuras.",
                                       "date":  "2026-06-28",
                                       "images":  [
@@ -249,19 +249,6 @@
                                                            "productos/My%20Little%20Pony/WhatsApp%20Image%202026-08-04%20at%2012.31.04%20PM.jpeg"
                                                        ]
                                         },
-                     "bloques lego":  {
-                                          "title":  "Bolsas de Bloques de Construcción para Niños",
-                                          "price":  5,
-                                          "originalPrice":  null,
-                                          "category":  "Juguetes",
-                                          "condition":  "Usado - Buen estado",
-                                          "availability":  "Disponible",
-                                          "description":  "🧸 Bolsas de Bloques de Construcción para Niños 🧸\n\n✨ ¡Desarrolla la creatividad y motricidad de los pequeños del hogar con horas de diversión! ✨\n\n🔥 PRECIO DE OFERTA: $5.00 c/u\n\n🌟 Detalles del Producto:\n🧱 Piezas Variadas y Coloridas: Bloques grandes y medianos fáciles de ensamblar.\n🎒 Empaque Práctico: Bolsa con cierre/agarradera para guardar y mantener todo ordenado.\n🛡️ Material Seguro: Plástico liviano, duradero y sin bordes afilados.\n🎨 Ideal para Regalo: Excelente opción educativa y económica para niños y niñas.\n\n📍 UBICACIÓN Y ENTREGAS:\n🏠 Punto de Venta: Mercado de Chalchuapa, Área de Terraza, Local #828H.\n📍 Punto Clave El Salvador",
-                                          "date":  "2026-08-06",
-                                          "images":  [
-                                                         "productos/bloques%20lego/WhatsApp%20Image%202026-08-04%20at%2012.54.08%20PM.jpeg"
-                                                     ]
-                                      },
                      "Audifonos TWS":  {
                                            "title":  "Audífonos Inalámbricos Bluetooth TWS Edición Superhéroes - ¡Nuevos!",
                                            "price":  12,
@@ -269,8 +256,8 @@
                                            "category":  "Electrónicos",
                                            "condition":  "Nuevo",
                                            "availability":  "Disponible",
-                                           "description":  "✨ ¡Lleva tu música a todos lados con el mejor estilo de Capitán América, Spider-Man e Iron Man! ✨\n\n🔥 PRECIO ESPECIAL DE OFERTA: $12.00\n\n.\n\n🌟 Características Destacadas:\n📶 Bluetooth V5.3: Conexión ultra rápida, estable y de bajo consumo de energía.\n🔊 Sonido Stereo HD \u0026 Pure Bass: Graves potentes y sonido claro para música y llamadas.\n🎨 Diseños Exclusivos: Estuches impresos con tus personajes favoritos.\n🔋 Estuche de Carga Portátil: Incluye cable de carga rápida para mayor autonomía.\n🔕 Ajuste Cómodo e In-Ear: Almohadillas suaves para uso prolongado sin molestias.\n\n.\n\n📍 UBICACIÓN Y ENTREGAS:\n\n🏠 Punto de Venta: Mercado de Chalchuapa, Área de Terraza, Local #828H.\n📍 Punto Clave El Salvador\n\n.\n\n🚚 OPCIONES DE ENVÍO:\n✅ ¡ENTREGA A DOMICILIO GRATIS! en todo Ciudad Real, Santa Ana.\n🚛 Envíos a otros municipios/sectores: Disponibles con costo adicional.",
                                            "date":  "2026-08-06",
+                                           "description":  "✨ ¡Lleva tu música a todos lados con el mejor estilo de Capitán América, Spider-Man e Iron Man! ✨\n\n🔥 PRECIO ESPECIAL DE OFERTA: $12.00\n\n.\n\n🌟 Características Destacadas:\n📶 Bluetooth V5.3: Conexión ultra rápida, estable y de bajo consumo de energía.\n🔊 Sonido Stereo HD \u0026 Pure Bass: Graves potentes y sonido claro para música y llamadas.\n🎨 Diseños Exclusivos: Estuches impresos con tus personajes favoritos.\n🔋 Estuche de Carga Portátil: Incluye cable de carga rápida para mayor autonomía.\n🔕 Ajuste Cómodo e In-Ear: Almohadillas suaves para uso prolongado sin molestias.\n\n.\n\n📍 UBICACIÓN Y ENTREGAS:\n\n🏠 Punto de Venta: Mercado de Chalchuapa, Área de Terraza, Local #828H.\n📍 Punto Clave El Salvador\n\n.\n\n🚚 OPCIONES DE ENVÍO:\n✅ ¡ENTREGA A DOMICILIO GRATIS! en todo Ciudad Real, Santa Ana.\n🚛 Envíos a otros municipios/sectores: Disponibles con costo adicional.",
                                            "images":  [
                                                           "productos/Audifonos%20TWS/20260806_113429.jpg",
                                                           "productos/Audifonos%20TWS/20260806_113432.jpg",
@@ -279,6 +266,19 @@
                                                           "productos/Audifonos%20TWS/20260806_113503.jpg",
                                                           "productos/Audifonos%20TWS/20260806_113553.jpg"
                                                       ]
-                                       }
+                                       },
+                     "bloques lego":  {
+                                          "title":  "Bolsas de Bloques de Construcción para Niños",
+                                          "price":  5,
+                                          "originalPrice":  null,
+                                          "category":  "Juguetes",
+                                          "condition":  "Usado - Buen estado",
+                                          "availability":  "Disponible",
+                                          "date":  "2026-08-06",
+                                          "description":  "🧸 Bolsas de Bloques de Construcción para Niños 🧸\n\n✨ ¡Desarrolla la creatividad y motricidad de los pequeños del hogar con horas de diversión! ✨\n\n🔥 PRECIO DE OFERTA: $5.00 c/u\n\n🌟 Detalles del Producto:\n🧱 Piezas Variadas y Coloridas: Bloques grandes y medianos fáciles de ensamblar.\n🎒 Empaque Práctico: Bolsa con cierre/agarradera para guardar y mantener todo ordenado.\n🛡️ Material Seguro: Plástico liviano, duradero y sin bordes afilados.\n🎨 Ideal para Regalo: Excelente opción educativa y económica para niños y niñas.\n\n📍 UBICACIÓN Y ENTREGAS:\n🏠 Punto de Venta: Mercado de Chalchuapa, Área de Terraza, Local #828H.\n📍 Punto Clave El Salvador",
+                                          "images":  [
+                                                         "productos/bloques%20lego/WhatsApp%20Image%202026-08-04%20at%2012.54.08%20PM.jpeg"
+                                                     ]
+                                      }
                  }
 }
