@@ -267,7 +267,7 @@ window.PRODUCTS = [
         "originalPrice":  65,
         "category":  "Tecnología",
         "condition":  "Usado - Buen estado",
-        "availability":  "Agotado",
+        "availability":  "Oculto",
         "date":  "2026-06-14",
         "description":  "Vendo Xiaomi Redmi 9 en buen estado general y funcionando correctamente.\n\nEspecificaciones:\n✓ 4 GB RAM / 64 GB almacenamiento\n✓ Android 12\n✓ Cámara, carga y táctil funcionando perfectamente\n✓ Se entrega formateado y listo para usar\n\nPrecio original $65, ahora en oferta por $50.",
         "images":  [
@@ -297,7 +297,7 @@ window.PRODUCTS = [
         "originalPrice":  null,
         "category":  "Tecnología",
         "condition":  "Usado - Buen estado",
-        "availability":  "Agotado",
+        "availability":  "Oculto",
         "date":  "2026-06-13",
         "description":  "La pantalla presenta una línea vertical color rosa (visible en fotografías). Fuera de ese detalle estético/visual, el teléfono funciona con normalidad.\n\nEspecificaciones:\n✓ Modelo: Samsung Galaxy S22 (SM-S901F)\n✓ Almacenamiento: 128 GB\n✓ RAM: 8 GB\n✓ Dual SIM\n✓ Cámara principal 50 MP + ultra gran angular + telefoto\n✓ Cámara frontal 10 MP\n✓ Carga rápida\n✓ Pantalla Dynamic AMOLED 120 Hz\n✓ Liberado\n\nFísicamente impecable y todo su sistema operativo, cámaras y batería están al 100%.",
         "images":  [

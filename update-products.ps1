@@ -102,6 +102,10 @@ foreach ($Folder in $Folders) {
         }
     }
 
+    # Guardar las imágenes en el objeto de configuración
+    $ProdInfo | Add-Member -MemberType NoteProperty -Name "images" -Value $RelativeImagePaths -Force
+    $ConfigUpdated = $true
+
     # Generar un ID simple para la web
     $CleanId = $Folder.Name.ToLower().Replace(" ", "-")
     $CleanId = [System.Text.Encoding]::ASCII.GetString([System.Text.Encoding]::GetEncoding("Cyrillic").GetBytes($CleanId))

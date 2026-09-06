@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración - Punto Clave</title>
+    <!-- Favicon para la pestaña del navegador (Logo Oficial Punto Clave) -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- Archivo de datos actual -->
+    <script src="products.js"></script>
+    <!-- Estilos -->
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="glow-bg glow-1"></div>
+    <div class="glow-bg glow-2"></div>
+
+    <!-- PANTALLA DE INICIO DE SESIÓN / LOCK SCREEN -->
+    <div id="login-modal" class="login-overlay">
+        <div class="login-card glass-panel">
+            <svg class="login-logo" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="p-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#1e3a8a" />
+                        <stop offset="50%" stop-color="#0284c7" />
+                        <stop offset="100%" stop-color="#06b6d4" />
+                    </linearGradient>
+                    <linearGradient id="g-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#ffe066" />
+                        <stop offset="50%" stop-color="#ffb300" />
+                        <stop offset="100%" stop-color="#ff8f00" />
+                    </linearGradient>
+                </defs>
+                <path d="M50 90C43.5 90 20 61.5 20 42C20 25.4 33.4 12 50 12C66.6 12 80 25.4 80 42C80 61.5 56.5 90 50 90Z" fill="url(#p-grad)" stroke="url(#g-grad)" stroke-width="3"/>
+                <circle cx="50" cy="42" r="18" fill="rgba(15,23,42,0.6)" stroke="url(#g-grad)" stroke-width="2"/>
+                <path d="M41 30V56" stroke="url(#g-grad)" stroke-width="4" stroke-linecap="round"/>
+                <circle cx="50" cy="38" r="4.5" fill="url(#g-grad)" />
+            </svg>
+            <h1 class="login-title">Panel Administrador</h1>
+            <p class="login-subtitle">Ingresa tu PIN de seguridad para continuar</p>
+
+            <form id="login-form">
+                <div class="pin-input-group">
+                    <input type="password" class="pin-digit" maxlength="1" autofocus autocomplete="off">
+                    <input type="password" class="pin-digit" maxlength="1" autocomplete="off">
+                    <input type="password" class="pin-digit" maxlength="1" autocomplete="off">
+                    <input type="password" class="pin-digit" maxlength="1" autocomplete="off">
+                </div>
+                <button type="submit" class="btn-primary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                    Desbloquear Panel
+                </button>
+                <div id="login-error" class="login-error"></div>
+            </form>
+        </div>
+    </div>
+
+    <!-- PANEL DE ADMINISTRACIÓN PRINCIPAL -->
+    <div id="admin-dashboard" class="admin-container" style="display: none;">
+        <!-- Header -->
+        <header class="admin-header glass-panel">
+            <div class="brand-header-info">
+                <svg width="32" height="32" viewBox="0 0 100 100" fill="none">
+                    <path d="M50 90C43.5 90 20 61.5 20 42C20 25.4 33.4 12 50 12C66.6 12 80 25.4 80 42C80 61.5 56.5 90 50 90Z" fill="url(#p-grad)" stroke="url(#g-grad)" stroke-width="3"/>
+                </svg>
+                <div class="header-title-text">
+                    <h1 id="header-store-name">Punto Clave</h1>
+                    <p>Módulo de Administración de Productos</p>
+                </div>
+            </div>
+            <div class="user-actions">
+                <a href="./" target="_blank" class="btn-secondary" title="Ver Tienda Pública">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    Ver Tienda
+                </a>
+                <button id="logout-btn" class="btn-secondary" title="Cerrar Sesión">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                    Salir
+                </button>
+            </div>
+        </header>
+
+        <!-- Navegación por Pestañas -->
+        <nav class="admin-tabs">
+            <button class="tab-btn active" data-tab="products">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                Productos (<span id="products-count">0</span>)
+            </button>
+            <button class="tab-btn" data-tab="editor" id="tab-editor-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                Nuevo Producto
+            </button>
+            <button class="tab-btn" data-tab="settings">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                Configuración
+            </button>
+        </nav>
+
+        <!-- PESTAÑA 1: LISTADO DE PRODUCTOS -->
+        <main id="tab-products" class="tab-content active">
+            <div class="toolbar">
+                <div class="search-field">
+                    <svg class="search-icon-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    <input type="text" id="admin-search-input" placeholder="Buscar por título o descripción...">
+                </div>
+                <select id="admin-category-filter" class="filter-select">
+                    <option value="">Todas las categorías</option>
+                </select>
+                <select id="admin-status-filter" class="filter-select">
+                    <option value="">Todos los estados</option>
+                    <option value="Disponible">Disponible (Público)</option>
+                    <option value="Agotado">Agotado (Público)</option>
+                    <option value="Oculto">Oculto (Privado)</option>
+                </select>
+            </div>
+
+            <div id="admin-products-grid" class="products-grid">
+                <!-- Se inyectarán dinámicamente -->
+            </div>
+        </main>
+
+        <!-- PESTAÑA 2: AGREGAR / EDITAR PRODUCTO -->
+        <main id="tab-editor" class="tab-content">
+            <div class="form-card glass-panel">
+                <h2 id="editor-heading" style="margin-bottom: 20px; font-family: 'Outfit';">Agregar Nuevo Producto</h2>
+                <form id="product-form">
+                    <input type="hidden" id="editing-original-key" value="">
+                    
+                    <div class="form-grid">
+                        <div class="form-group full-width">
+                            <label for="prod-title">Título del Producto *</label>
+                            <input type="text" id="prod-title" class="form-control" placeholder="Ej: Audífonos Inalámbricos TWS" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="prod-folder">Nombre de Carpeta / Identificador *</label>
+                            <input type="text" id="prod-folder" class="form-control" placeholder="Ej: Audifonos TWS" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="prod-category">Categoría *</label>
+                            <input type="text" id="prod-category" class="form-control" list="categories-list" placeholder="Ej: Electrónicos, Juguetes, Tecnología" required>
+                            <datalist id="categories-list">
+                                <option value="Electrónicos">
+                                <option value="Tecnología">
+                                <option value="Juguetes">
+                                <option value="Videojuegos">
+                                <option value="Hogar">
+                                <option value="Otros">
+                            </datalist>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="prod-price">Precio ($ USD) *</label>
+                            <input type="number" step="0.01" id="prod-price" class="form-control" placeholder="0.00" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="prod-original-price">Precio Anterior / Tachado ($ USD)</label>
+                            <input type="number" step="0.01" id="prod-original-price" class="form-control" placeholder="Opcional para mostrar oferta">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="prod-condition">Estado del Artículo *</label>
+                            <select id="prod-condition" class="form-control">
+                                <option value="Nuevo">Nuevo</option>
+                                <option value="Usado - Como nuevo">Usado - Como nuevo</option>
+                                <option value="Usado - Buen estado" selected>Usado - Buen estado</option>
+                                <option value="Usado - Aceptable">Usado - Aceptable</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="prod-availability">Visibilidad y Disponibilidad *</label>
+                            <select id="prod-availability" class="form-control">
+                                <option value="Disponible" selected>🟢 Disponible (Visible en Tienda)</option>
+                                <option value="Agotado">🔴 Agotado (Visible con distintivo Agotado)</option>
+                                <option value="Oculto">👁️‍🗨️ Oculto (Ocultar de la tienda pública)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="prod-description">Descripción del Producto</label>
+                            <textarea id="prod-description" class="form-control" placeholder="Detalla las características, ubicación, entregas, estado del producto..."></textarea>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label>Fotografías del Producto *</label>
+                            <div id="image-dropzone" class="image-upload-box">
+                                <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                                <p style="font-weight: 600; margin-bottom: 4px;">Arrastra tus fotos aquí o haz clic para seleccionar</p>
+                                <p style="font-size: 0.8rem; color: var(--text-muted);">Formatos aceptados: JPG, PNG, WEBP (Se permite seleccionar múltiples fotos)</p>
+                                <input type="file" id="prod-images-input" multiple accept="image/*" style="display: none;">
+                            </div>
+
+                            <div id="image-previews" class="image-preview-container">
+                                <!-- Previsualización de imágenes subidas/existentes -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 24px; display: flex; gap: 12px; justify-content: flex-end;">
+                        <button type="button" id="cancel-edit-btn" class="btn-secondary">Cancelar</button>
+                        <button type="submit" id="save-product-btn" class="btn-primary">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg>
+                            Guardar y Publicar en GitHub
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+        <!-- PESTAÑA 3: CONFIGURACIÓN -->
+        <main id="tab-settings" class="tab-content">
+            <div class="settings-card glass-panel">
+                <h2>Configuración del Sistema</h2>
+
+                <form id="settings-form">
+                    <div class="form-group" style="margin-bottom: 20px;">
+                        <label for="setting-repo">Repositorio GitHub (Usuario/Repositorio)</label>
+                        <input type="text" id="setting-repo" class="form-control" placeholder="chavezvigil/punto-clave" value="chavezvigil/punto-clave">
+                    </div>
+
+                    <div class="form-group" style="margin-bottom: 20px;">
+                        <label for="setting-token">Token de Acceso Personal de GitHub (PAT) *</label>
+                        <input type="password" id="setting-token" class="form-control" placeholder="github_pat_...">
+                        <div class="token-help-box">
+                            <strong>¿Cómo obtener tu Token de GitHub?</strong>
+                            <ol>
+                                <li>Inicia sesión en GitHub.com y ve a tu <strong>Perfil > Settings > Developer Settings</strong>.</li>
+                                <li>Haz clic en <strong>Personal access tokens > Tokens (classic)</strong>.</li>
+                                <li>Haz clic en <strong>Generate new token (classic)</strong>.</li>
+                                <li>Ponle una nota (ej: <i>Tienda Admin</i>) y marca la casilla <strong><code>repo</code></strong> (acceso completo a repositorios).</li>
+                                <li>Genera el token, cópialo y pégalo aquí. ¡Solo necesitarás configurarlo una vez por dispositivo!</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="form-group" style="margin-bottom: 20px;">
+                        <label for="setting-pin">PIN de Acceso al Administrador (4 dígitos)</label>
+                        <input type="password" id="setting-pin" class="form-control" maxlength="6" placeholder="Por defecto: 1234">
+                    </div>
+
+                    <div class="form-group" style="margin-bottom: 20px;">
+                        <label for="setting-store-name">Nombre de la Tienda</label>
+                        <input type="text" id="setting-store-name" class="form-control" placeholder="Punto Clave">
+                    </div>
+
+                    <div class="form-group" style="margin-bottom: 24px;">
+                        <label for="setting-whatsapp">Número de WhatsApp (con código de país)</label>
+                        <input type="text" id="setting-whatsapp" class="form-control" placeholder="50376172548">
+                    </div>
+
+                    <button type="submit" class="btn-primary">Guardar Configuración</button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <!-- OVERLAY DE PROGRESO DE PUBLICACIÓN -->
+    <div id="progress-modal" class="progress-overlay">
+        <div class="progress-card glass-panel">
+            <div class="spinner"></div>
+            <h3 id="progress-title" style="font-family: 'Outfit'; font-size: 1.3rem; margin-bottom: 8px;">Publicando Cambios...</h3>
+            <p id="progress-subtitle" style="font-size: 0.85rem; color: var(--text-muted);">Sincronizando con tu repositorio de GitHub</p>
+
+            <div class="progress-steps">
+                <div id="step-images" class="step-item">
+                    <span>1. Procesando y subiendo fotografías</span>
+                </div>
+                <div id="step-config" class="step-item">
+                    <span>2. Actualizando configuración JSON</span>
+                </div>
+                <div id="step-compile" class="step-item">
+                    <span>3. Compilando script de productos</span>
+                </div>
+                <div id="step-github" class="step-item">
+                    <span>4. Guardando commit en GitHub</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script Principal del Administrador -->
+    <script src="admin.js"></script>
+</body>
+</html>

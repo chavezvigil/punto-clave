@@ -141,7 +141,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- FILTRADO Y ORDENAMIENTO ---
     function applyFilters() {
-        let result = [...state.products];
+        // Excluir productos ocultos de la vista pública
+        let result = state.products.filter(p => !p.availability || p.availability.toLowerCase() !== 'oculto');
 
         // 1. Filtrar por Categoría
         if (state.activeCategory !== 'todos') {
@@ -211,7 +212,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         productsGrid.innerHTML = state.filteredProducts.map(product => {
             const isOutOfStock = product.availability.toLowerCase() === 'agotado';
-            const firstImage = product.images.length > 0 ? product.images[0] : 'https://placehold.co/400x400?text=Sin+Foto';
+            let firstImage = 'thumbnail.png';
+            if (product.images && product.images.length > 0) {
+                try { firstImage = decodeURIComponent(product.images[0]); } catch (e) { firstImage = product.images[0]; }
+            }
             const inCart = state.cart.some(item => item.id === product.id);
 
             // Formato de precio tachado si hay descuento

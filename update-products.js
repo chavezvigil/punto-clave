@@ -79,11 +79,12 @@ function main() {
 
     const prodInfo = config.products[folder.name];
     
-    // Build image paths relative to tienda/index.html (i.e. ../FolderName/FileName)
-    // We encode the URI components of the folder and file name for safety in HTML/CSS
     const relativeImagePaths = images.map(img => {
-      return `../${encodeURIComponent(folder.name)}/${encodeURIComponent(img)}`;
+      return `productos/${encodeURIComponent(folder.name)}/${encodeURIComponent(img)}`;
     });
+
+    prodInfo.images = relativeImagePaths;
+    configUpdated = true;
 
     finalProducts.push({
       id: folder.name.replace(/\s+/g, '-').toLowerCase(),

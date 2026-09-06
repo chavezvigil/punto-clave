@@ -1,0 +1,22 @@
+<svg viewBox="0 0 100 100" width="128" height="128" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="tech-blue-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#1e3a8a" />
+            <stop offset="50%" stop-color="#0284c7" />
+            <stop offset="100%" stop-color="#06b6d4" />
+        </linearGradient>
+        <linearGradient id="tech-gold-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#ffe066" />
+            <stop offset="50%" stop-color="#ffb300" />
+            <stop offset="100%" stop-color="#ff8f00" />
+        </linearGradient>
+    </defs>
+    <!-- Pin / Teardrop shape of Punto Clave -->
+    <path d="M50 92C43.5 92 18 63 18 42C18 24.3 32.3 10 50 10C67.7 10 82 24.3 82 42C82 63 56.5 92 50 92Z" fill="url(#tech-blue-grad)" stroke="url(#tech-gold-grad)" stroke-width="4" stroke-linejoin="round"/>
+    <!-- Inner Keyhole circle -->
+    <circle cx="50" cy="42" r="19" fill="#0f172a" stroke="url(#tech-gold-grad)" stroke-width="3"/>
+    <!-- Key icon elements -->
+    <path d="M41 30V56" stroke="url(#tech-gold-grad)" stroke-width="4.5" stroke-linecap="round"/>
+    <circle cx="50" cy="38" r="4.5" fill="url(#tech-gold-grad)" />
+    <polygon points="47.5 40 52.5 40 54.5 50 45.5 50" fill="url(#tech-gold-grad)" />
+</svg>
