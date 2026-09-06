@@ -20,6 +20,53 @@ document.addEventListener('DOMContentLoaded', () => {
         currentSliderIndex: 0
     };
 
+    // --- PRECARGADOR DE IMÁGENES EN SEGUNDO PLANO (Carga Instantánea) ---
+    function preloadAllCatalogImages(products) {
+        if (!products || !Array.isArray(products)) return;
+        const imageUrls = [];
+        products.forEach(p => {
+            if (p.images && Array.isArray(p.images)) {
+                p.images.forEach(img => {
+                    if (img && typeof img === 'string' && !img.includes('placehold.co')) {
+                        imageUrls.push(encodeURI(img));
+                    }
+                });
+            }
+        });
+
+        let idx = 0;
+        function loadChunk() {
+            const batchSize = 4;
+            for (let i = 0; i < batchSize && idx < imageUrls.length; i++, idx++) {
+                const tempImg = new Image();
+                tempImg.src = imageUrls[idx];
+            }
+            if (idx < imageUrls.length) {
+                if ('requestIdleCallback' in window) {
+                    requestIdleCallback(loadChunk, { timeout: 1000 });
+                } else {
+                    setTimeout(loadChunk, 150);
+                }
+            }
+        }
+
+        if ('requestIdleCallback' in window) {
+            requestIdleCallback(loadChunk, { timeout: 1500 });
+        } else {
+            setTimeout(loadChunk, 200);
+        }
+    }
+
+    window.preloadProductModalImages = function(productId) {
+        const product = state.products.find(p => p.id === productId);
+        if (product && product.images && Array.isArray(product.images)) {
+            product.images.forEach(src => {
+                const i = new Image();
+                i.src = encodeURI(src);
+            });
+        }
+    };
+
     // Refresco en tiempo real Anti-Caché desde GitHub Pages
     async function fetchLiveCatalog() {
         try {
@@ -48,6 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         state.products = freshProducts;
                         renderCategories();
                         applyFilters();
+                        preloadAllCatalogImages(freshProducts);
                     }
                 }
             }
@@ -56,6 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     fetchLiveCatalog();
+    preloadAllCatalogImages(state.products);
 
     // --- ELEMENTOS DEL DOM ---
     const storeTitleEl = document.getElementById('store-title');
@@ -267,9 +316,9 @@ document.addEventListener('DOMContentLoaded', () => {
                         <span class="badge badge-condition">${product.condition}</span>
                     </div>
                     
-                    <div class="product-card-link" onclick="window.openProductDetails('${product.id}')">
+                    <div class="product-card-link" onclick="window.openProductDetails('${product.id}')" onmouseenter="window.preloadProductModalImages('${product.id}')" ontouchstart="window.preloadProductModalImages('${product.id}')">
                         <div class="card-img-wrapper">
-                            <img class="card-img" src="${firstImage}" alt="${product.title}" loading="lazy">
+                            <img class="card-img" src="${firstImage}" alt="${product.title}" loading="lazy" decoding="async" onload="this.classList.add('img-loaded')" onerror="this.onerror=null; this.src='https://placehold.co/600x600?text=Sin+Imagen'; this.classList.add('img-loaded');">
                         </div>
                         <div class="card-info">
                             <h3 class="product-title">${product.title}</h3>
@@ -281,7 +330,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     
                     <div class="card-info" style="padding-top: 0; margin-top: -1rem;">
                         <div class="card-actions">
-                            <button class="btn btn-secondary btn-sm btn-grow" onclick="window.openProductDetails('${product.id}')">
+                            <button class="btn btn-secondary btn-sm btn-grow" onclick="window.openProductDetails('${product.id}')" onmouseenter="window.preloadProductModalImages('${product.id}')">
                                 Ver Detalles
                             </button>
                             <button class="cart-icon-btn ${inCart ? 'in-cart' : ''}" 
@@ -295,6 +344,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 </article>
             `;
         }).join('');
+
+        // Activar imágenes ya en caché en el grid principal
+        setTimeout(() => {
+            document.querySelectorAll('.card-img').forEach(imgEl => {
+                if (imgEl.complete) imgEl.classList.add('img-loaded');
+            });
+        }, 50);
     }
 
     // --- MODAL DETALLE DE PRODUCTO ---
@@ -304,6 +360,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         state.currentProductModal = product;
         state.currentSliderIndex = 0;
+
+        // Precargar inmediatamente todas las fotos de este producto al abrir el modal
+        if (product.images && Array.isArray(product.images)) {
+            product.images.forEach(src => {
+                const temp = new Image();
+                temp.src = encodeURI(src);
+            });
+        }
 
         // Registrar vista de producto en Google Analytics
         if (typeof gtag === 'function') {
@@ -338,9 +402,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Galería de Imágenes
         if (product.images.length > 0) {
-            modalSlider.innerHTML = product.images.map(img => `
-                <img src="${img}" alt="${product.title}">
+            modalSlider.innerHTML = product.images.map((img, idx) => `
+                <img src="${img}" alt="${product.title}" decoding="async" loading="${idx === 0 ? 'eager' : 'lazy'}" onload="this.classList.add('img-loaded')" onerror="this.onerror=null; this.src='https://placehold.co/600x600?text=Sin+Imagen'; this.classList.add('img-loaded');">
             `).join('');
+
+            // Activar clase para imágenes ya cargadas en memoria
+            setTimeout(() => {
+                modalSlider.querySelectorAll('img').forEach(imgEl => {
+                    if (imgEl.complete) imgEl.classList.add('img-loaded');
+                });
+            }, 20);
 
             // Flechas de navegación
             if (product.images.length > 1) {
