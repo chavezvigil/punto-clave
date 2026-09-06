@@ -117,20 +117,18 @@ window.PRODUCTS = [
     {
         "id": "discos",
         "folderName": "Discos",
-        "title": "SSD M.2 NVMe, Discos Duros 2.5 y Memorias RAM SO-DIMM",
+        "title": "Discos Duros 2.5 Sata Laptop y Memorias RAM SO-DIMM",
         "price": 15,
         "originalPrice": null,
         "category": "Tecnología",
         "condition": "Usado - Como nuevo",
         "availability": "Disponible",
-        "date": "2026-08-06",
-        "description": "¡En venta componentes en excelente estado y probados! Ideales para repuesto, actualización o almacenamiento extra.\n\n📌 PRECIOS Y LISTA DE COMPONENTES:\n\n💾 ALMACENAMIENTO / DISCOS DUROS:\n• SSD M.2 NVMe Samsung 512GB (Formato M.2 2280) - [VENDIDO]\n• Disco Duro 2.5 HGST 500 Gigabytes (500GB) (7200 RPM - Alta Velocidad) - $15.00 (Salud Bueno 100% en CrystalDiskInfo)\n\n🧠 MEMORIAS RAM PARA LAPTOP (SO-DIMM):\n• Memoria RAM Kingston 8GB DDR4 - $25.00\n• Memoria RAM Samsung 2GB DDR3 (1333/1600 MHz) - $10.00\n*(Consultar disponibilidad por las demás memorias RAM de las fotografías)*\n\n📍 ENTREGA Y CONDICIONES:\n✓ Todos los discos han sido probados y formateados (Estado de salud Bueno en CrystalDiskInfo).\n✓ Entregas personales en puntos céntricos / centros comerciales.\n✓ Envíos disponibles (costo adicional según zona).\n✓ Pago en efectivo o transferencia bancaria.",
+        "date": "2026-09-06",
+        "description": "¡En venta componentes en excelente estado y probados! Ideales para repuesto, actualización o almacenamiento extra.\n\n📌 PRECIOS Y LISTA DE COMPONENTES:\n\n💾 ALMACENAMIENTO / DISCOS DUROS:\n• Disco Duro 2.5 HGST 500 Gigabytes (500GB) (7200 RPM - Alta Velocidad) - $15.00 (Salud Bueno 100% en CrystalDiskInfo)\n\n🧠 MEMORIAS RAM PARA LAPTOP (SO-DIMM):\n• Memoria RAM Samsung 2GB DDR3 (1333/1600 MHz) - $10.00\n*(Consultar disponibilidad por las demás memorias RAM de las fotografías)*\n\n📍 ENTREGA Y CONDICIONES:\n✓ Todos los discos han sido probados y formateados (Estado de salud Bueno en CrystalDiskInfo).\n✓ Entregas personales en puntos céntricos / centros comerciales.\n✓ Envíos disponibles (costo adicional según zona).\n✓ Pago en efectivo o transferencia bancaria.",
         "images": [
             "productos/Discos/20260803_140036.jpg",
             "productos/Discos/20260803_140919.jpg",
             "productos/Discos/20260803_142131.jpg",
-            "productos/Discos/20260803_143242.jpg",
-            "productos/Discos/20260803_143247.jpg",
             "productos/Discos/20260803_143348.jpg",
             "productos/Discos/hdd%20500%20gb.png",
             "productos/Discos/imagen%202.png"
