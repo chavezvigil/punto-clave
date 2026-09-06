@@ -12,7 +12,7 @@ window.PRODUCTS = [
         "folderName": "Audifonos TV13",
         "title": "Audífonos Inalámbricos D3 TWS - ¡Nuevos y Sellados!",
         "price": 10,
-        "originalPrice": 20,
+        "originalPrice": 15,
         "category": "Electrónicos",
         "condition": "Nuevo",
         "availability": "Disponible",
