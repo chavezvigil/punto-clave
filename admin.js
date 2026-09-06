@@ -591,6 +591,27 @@ document.addEventListener('DOMContentLoaded', () => {
             setStepStatus('step-images', 'done');
             setStepStatus('step-config', 'active');
 
+            // Re-sincronizar con la versión más reciente en GitHub para no sobreescribir productos creados desde otros dispositivos
+            try {
+                const freshRes = await fetch(`https://api.github.com/repos/${adminSettings.repo}/contents/products-config.json?t=${Date.now()}`, {
+                    headers: {
+                        'Authorization': `token ${adminSettings.token}`,
+                        'Accept': 'application/vnd.github.v3+json'
+                    },
+                    cache: 'no-cache'
+                });
+                if (freshRes.ok) {
+                    const freshData = await freshRes.json();
+                    const freshContent = JSON.parse(decodeURIComponent(escape(atob(freshData.content.replace(/\n/g, '')))));
+                    if (freshContent && freshContent.products) {
+                        // Conservar catálogo remoto y aplicar cambios actuales (Merge seguro)
+                        catalogConfig.products = { ...freshContent.products, ...catalogConfig.products };
+                    }
+                }
+            } catch (syncErr) {
+                console.warn('Aviso: No se pudo re-sincronizar remoto antes de publicar:', syncErr);
+            }
+
             // 2. Subir products-config.json
             const jsonString = JSON.stringify(catalogConfig, null, 4);
             const jsonBase64 = btoa(unescape(encodeURIComponent(jsonString)));
