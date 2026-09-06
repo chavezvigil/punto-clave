@@ -42,7 +42,7 @@ window.PRODUCTS = [
         "originalPrice": null,
         "category": "Juguetes",
         "condition": "Usado - Buen estado",
-        "availability": "Agotado",
+        "availability": "Oculto",
         "date": "2026-06-28",
         "description": "Castillo de Princesa para Niñas – Casita de Juegos. ¡Ideal para horas de diversión e imaginación! Hermoso castillo infantil color rosa, perfecto para jugar dentro de casa o en el jardín.\n\n✓ Diseño de princesa con coronas y moño decorativo\n✓ Fácil de armar y desarmar\n✓ Liviano y práctico para guardar\n✓ Excelente estado, limpio y listo para usar\n✓ Espacio cómodo para juego infantil",
         "images": [
