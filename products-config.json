@@ -27,6 +27,37 @@
                                                            "productos/Audifonos%20TV13/Gemini_Generated_Image_odq53dodq53dodq5.png"
                                                        ]
                                         },
+                     "Audifonos TWS":  {
+                                           "title":  "Audífonos Inalámbricos Bluetooth TWS Edición Superhéroes - ¡Nuevos!",
+                                           "price":  12,
+                                           "originalPrice":  15,
+                                           "category":  "Electrónicos",
+                                           "condition":  "Nuevo",
+                                           "availability":  "Disponible",
+                                           "date":  "2026-08-06",
+                                           "description":  "✨ ¡Lleva tu música a todos lados con el mejor estilo de Capitán América, Spider-Man e Iron Man! ✨\n\n🔥 PRECIO ESPECIAL DE OFERTA: $12.00\n\n.\n\n🌟 Características Destacadas:\n📶 Bluetooth V5.3: Conexión ultra rápida, estable y de bajo consumo de energía.\n🔊 Sonido Stereo HD \u0026 Pure Bass: Graves potentes y sonido claro para música y llamadas.\n🎨 Diseños Exclusivos: Estuches impresos con tus personajes favoritos.\n🔋 Estuche de Carga Portátil: Incluye cable de carga rápida para mayor autonomía.\n🔕 Ajuste Cómodo e In-Ear: Almohadillas suaves para uso prolongado sin molestias.\n\n.\n\n📍 UBICACIÓN Y ENTREGAS:\n\n🏠 Punto de Venta: Mercado de Chalchuapa, Área de Terraza, Local #828H.\n📍 Punto Clave El Salvador\n\n.\n\n🚚 OPCIONES DE ENVÍO:\n✅ ¡ENTREGA A DOMICILIO GRATIS! en todo Ciudad Real, Santa Ana.\n🚛 Envíos a otros municipios/sectores: Disponibles con costo adicional.",
+                                           "images":  [
+                                                          "productos/Audifonos%20TWS/20260806_113429.jpg",
+                                                          "productos/Audifonos%20TWS/20260806_113432.jpg",
+                                                          "productos/Audifonos%20TWS/20260806_113438.jpg",
+                                                          "productos/Audifonos%20TWS/20260806_113450.jpg",
+                                                          "productos/Audifonos%20TWS/20260806_113503.jpg",
+                                                          "productos/Audifonos%20TWS/20260806_113553.jpg"
+                                                      ]
+                                       },
+                     "bloques lego":  {
+                                          "title":  "Bolsas de Bloques de Construcción para Niños",
+                                          "price":  5,
+                                          "originalPrice":  null,
+                                          "category":  "Juguetes",
+                                          "condition":  "Usado - Buen estado",
+                                          "availability":  "Disponible",
+                                          "date":  "2026-08-06",
+                                          "description":  "🧸 Bolsas de Bloques de Construcción para Niños 🧸\n\n✨ ¡Desarrolla la creatividad y motricidad de los pequeños del hogar con horas de diversión! ✨\n\n🔥 PRECIO DE OFERTA: $5.00 c/u\n\n🌟 Detalles del Producto:\n🧱 Piezas Variadas y Coloridas: Bloques grandes y medianos fáciles de ensamblar.\n🎒 Empaque Práctico: Bolsa con cierre/agarradera para guardar y mantener todo ordenado.\n🛡️ Material Seguro: Plástico liviano, duradero y sin bordes afilados.\n🎨 Ideal para Regalo: Excelente opción educativa y económica para niños y niñas.\n\n📍 UBICACIÓN Y ENTREGAS:\n🏠 Punto de Venta: Mercado de Chalchuapa, Área de Terraza, Local #828H.\n📍 Punto Clave El Salvador",
+                                          "images":  [
+                                                         "productos/bloques%20lego/WhatsApp%20Image%202026-08-04%20at%2012.54.08%20PM.jpeg"
+                                                     ]
+                                      },
                      "Castillo":  {
                                       "title":  "Castillo de Juegos para Niñas",
                                       "price":  7,
@@ -95,7 +126,7 @@
                                       "originalPrice":  null,
                                       "category":  "Juguetes",
                                       "condition":  "Usado - Buen estado",
-                                      "availability":  "Oculto",
+                                      "availability":  "Agotado",
                                       "description":  "¡Diversión para los pequeños con este clásico juguete Fisher-Price! 🚗✨ Estación de parqueo con rampas para jugar con carritos, estimular la imaginación y crear diferentes recorridos.\n\n🎯 Características:\n✓ Marca Fisher-Price\n✓ Diseño con varios niveles y rampa\n✓ Material plástico resistente y duradero\n✓ Ideal para juego infantil\n✓ Buen estado general, limpio y listo para usarse\n\nPerfecto para niños que disfrutan jugar con carros y crear sus propias aventuras.",
                                       "date":  "2026-06-28",
                                       "images":  [
@@ -185,13 +216,27 @@
                                                          "productos/Memorias%20RAM/20260628_115644.jpg"
                                                      ]
                                       },
+                     "My Little Pony":  {
+                                            "title":  "Set de Figuras My Little Pony Generación 5 (G5) Originales - Lote o Individual",
+                                            "price":  15,
+                                            "originalPrice":  null,
+                                            "category":  "Juguetes",
+                                            "condition":  "Usado - Como nuevo",
+                                            "availability":  "Disponible",
+                                            "description":  "✨ Hermoso lote de 5 ponis estilo My Little Pony G5 Originales.\n\n✓ Buen estado\n✓ Colores vivos\n✓ Ideales para niñas, colección o decoración\n✓ Se venden juntos o por separado\n\n💲 Precio del lote: $15.00 negociables\n💲 Precio individual: $3.50 cada uno",
+                                            "date":  "2026-08-06",
+                                            "images":  [
+                                                           "productos/My%20Little%20Pony/pony.jpg",
+                                                           "productos/My%20Little%20Pony/WhatsApp%20Image%202026-08-04%20at%2012.31.04%20PM.jpeg"
+                                                       ]
+                                        },
                      "Redmi 9":  {
                                      "title":  "Xiaomi Redmi 9 – 64 GB – Liberado",
                                      "price":  50,
                                      "originalPrice":  65,
                                      "category":  "Tecnología",
                                      "condition":  "Usado - Buen estado",
-                                     "availability":  "Oculto",
+                                     "availability":  "Agotado",
                                      "description":  "Vendo Xiaomi Redmi 9 en buen estado general y funcionando correctamente.\n\nEspecificaciones:\n✓ 4 GB RAM / 64 GB almacenamiento\n✓ Android 12\n✓ Cámara, carga y táctil funcionando perfectamente\n✓ Se entrega formateado y listo para usar\n\nPrecio original $65, ahora en oferta por $50.",
                                      "date":  "2026-06-14",
                                      "images":  [
@@ -234,51 +279,6 @@
                                                 "productos/s22/20260629_090421.jpg",
                                                 "productos/s22/20260629_090438.jpg"
                                             ]
-                             },
-                     "My Little Pony":  {
-                                            "title":  "Set de Figuras My Little Pony Generación 5 (G5) Originales - Lote o Individual",
-                                            "price":  15,
-                                            "originalPrice":  null,
-                                            "category":  "Juguetes",
-                                            "condition":  "Usado - Como nuevo",
-                                            "availability":  "Disponible",
-                                            "description":  "✨ Hermoso lote de 5 ponis estilo My Little Pony G5 Originales.\n\n✓ Buen estado\n✓ Colores vivos\n✓ Ideales para niñas, colección o decoración\n✓ Se venden juntos o por separado\n\n💲 Precio del lote: $15.00 negociables\n💲 Precio individual: $3.50 cada uno",
-                                            "date":  "2026-08-06",
-                                            "images":  [
-                                                           "productos/My%20Little%20Pony/pony.jpg",
-                                                           "productos/My%20Little%20Pony/WhatsApp%20Image%202026-08-04%20at%2012.31.04%20PM.jpeg"
-                                                       ]
-                                        },
-                     "Audifonos TWS":  {
-                                           "title":  "Audífonos Inalámbricos Bluetooth TWS Edición Superhéroes - ¡Nuevos!",
-                                           "price":  12,
-                                           "originalPrice":  15,
-                                           "category":  "Electrónicos",
-                                           "condition":  "Nuevo",
-                                           "availability":  "Disponible",
-                                           "date":  "2026-08-06",
-                                           "description":  "✨ ¡Lleva tu música a todos lados con el mejor estilo de Capitán América, Spider-Man e Iron Man! ✨\n\n🔥 PRECIO ESPECIAL DE OFERTA: $12.00\n\n.\n\n🌟 Características Destacadas:\n📶 Bluetooth V5.3: Conexión ultra rápida, estable y de bajo consumo de energía.\n🔊 Sonido Stereo HD \u0026 Pure Bass: Graves potentes y sonido claro para música y llamadas.\n🎨 Diseños Exclusivos: Estuches impresos con tus personajes favoritos.\n🔋 Estuche de Carga Portátil: Incluye cable de carga rápida para mayor autonomía.\n🔕 Ajuste Cómodo e In-Ear: Almohadillas suaves para uso prolongado sin molestias.\n\n.\n\n📍 UBICACIÓN Y ENTREGAS:\n\n🏠 Punto de Venta: Mercado de Chalchuapa, Área de Terraza, Local #828H.\n📍 Punto Clave El Salvador\n\n.\n\n🚚 OPCIONES DE ENVÍO:\n✅ ¡ENTREGA A DOMICILIO GRATIS! en todo Ciudad Real, Santa Ana.\n🚛 Envíos a otros municipios/sectores: Disponibles con costo adicional.",
-                                           "images":  [
-                                                          "productos/Audifonos%20TWS/20260806_113429.jpg",
-                                                          "productos/Audifonos%20TWS/20260806_113432.jpg",
-                                                          "productos/Audifonos%20TWS/20260806_113438.jpg",
-                                                          "productos/Audifonos%20TWS/20260806_113450.jpg",
-                                                          "productos/Audifonos%20TWS/20260806_113503.jpg",
-                                                          "productos/Audifonos%20TWS/20260806_113553.jpg"
-                                                      ]
-                                       },
-                     "bloques lego":  {
-                                          "title":  "Bolsas de Bloques de Construcción para Niños",
-                                          "price":  5,
-                                          "originalPrice":  null,
-                                          "category":  "Juguetes",
-                                          "condition":  "Usado - Buen estado",
-                                          "availability":  "Disponible",
-                                          "date":  "2026-08-06",
-                                          "description":  "🧸 Bolsas de Bloques de Construcción para Niños 🧸\n\n✨ ¡Desarrolla la creatividad y motricidad de los pequeños del hogar con horas de diversión! ✨\n\n🔥 PRECIO DE OFERTA: $5.00 c/u\n\n🌟 Detalles del Producto:\n🧱 Piezas Variadas y Coloridas: Bloques grandes y medianos fáciles de ensamblar.\n🎒 Empaque Práctico: Bolsa con cierre/agarradera para guardar y mantener todo ordenado.\n🛡️ Material Seguro: Plástico liviano, duradero y sin bordes afilados.\n🎨 Ideal para Regalo: Excelente opción educativa y económica para niños y niñas.\n\n📍 UBICACIÓN Y ENTREGAS:\n🏠 Punto de Venta: Mercado de Chalchuapa, Área de Terraza, Local #828H.\n📍 Punto Clave El Salvador",
-                                          "images":  [
-                                                         "productos/bloques%20lego/WhatsApp%20Image%202026-08-04%20at%2012.54.08%20PM.jpeg"
-                                                     ]
-                                      }
+                             }
                  }
 }
