@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Facebook Cover Render</title>
+    <title>Facebook Cover Render Dark</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800;900&display=swap');
         
@@ -18,7 +18,7 @@
             font-family: 'Inter', sans-serif;
             position: relative;
             overflow: hidden;
-            padding: 40px 80px;
+            padding: 40px 90px;
             color: #ffffff;
         }
 
@@ -52,60 +52,62 @@
             pointer-events: none;
         }
 
-        /* Left Column - Real Logo Card */
-        .logo-box {
+        /* Left Column - Clean Integrated SVG Logo Lockup */
+        .brand-left {
             position: relative;
             z-index: 10;
-            width: 520px;
-            height: 480px;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
-            backdrop-filter: blur(24px);
-            -webkit-backdrop-filter: blur(24px);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            border-radius: 28px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.25);
-            padding: 30px;
+            width: 480px;
+            text-align: center;
         }
 
-        .logo-wrapper {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 15px;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0) 70%);
-            border-radius: 30px;
+        .logo-svg {
+            width: 240px;
+            height: 240px;
+            filter: drop-shadow(0 15px 35px rgba(2, 132, 199, 0.4)) drop-shadow(0 0 20px rgba(255, 179, 0, 0.3));
+            margin-bottom: 16px;
         }
 
-        .logo-img {
-            max-width: 440px;
-            max-height: 360px;
-            object-fit: contain;
-            filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.3)) drop-shadow(0 15px 30px rgba(0,0,0,0.7));
+        .brand-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 56px;
+            font-weight: 900;
+            color: #ffffff;
+            letter-spacing: -1px;
+            line-height: 1;
+            margin-bottom: 6px;
         }
 
-        /* Right Column - Brand Information & Offerings */
-        .info-container {
+        .brand-sub {
+            font-family: 'Inter', sans-serif;
+            font-size: 20px;
+            font-weight: 800;
+            color: #38bdf8;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+        }
+
+        /* Right Column - Store Offerings & Info */
+        .info-right {
             position: relative;
             z-index: 10;
-            width: 880px;
+            width: 900px;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
 
-        .brand-badge {
+        .location-badge {
             display: inline-flex;
             align-items: center;
             gap: 8px;
             background: rgba(6, 182, 212, 0.15);
             border: 1px solid rgba(6, 182, 212, 0.4);
             color: #38bdf8;
-            padding: 8px 20px;
+            padding: 8px 22px;
             border-radius: 30px;
             font-size: 15px;
             font-weight: 700;
@@ -117,7 +119,7 @@
 
         .headline {
             font-family: 'Outfit', sans-serif;
-            font-size: 52px;
+            font-size: 54px;
             font-weight: 900;
             line-height: 1.1;
             margin-bottom: 12px;
@@ -134,7 +136,7 @@
             margin-bottom: 28px;
         }
 
-        /* Offerings Grid */
+        /* Feature Pills Grid */
         .features-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -146,21 +148,21 @@
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.12);
             border-radius: 14px;
-            padding: 12px 18px;
+            padding: 14px 20px;
             display: flex;
             align-items: center;
             gap: 12px;
-            font-size: 16px;
+            font-size: 17px;
             font-weight: 600;
             color: #f1f5f9;
             backdrop-filter: blur(10px);
         }
 
         .feature-icon {
-            font-size: 20px;
+            font-size: 22px;
         }
 
-        /* Footer CTA Bar */
+        /* CTA Bar */
         .cta-bar {
             display: flex;
             align-items: center;
@@ -174,8 +176,8 @@
 
         .url-text {
             font-family: 'Outfit', sans-serif;
-            font-size: 20px;
-            font-weight: 700;
+            font-size: 21px;
+            font-weight: 800;
             color: #ffb300;
             letter-spacing: 0.5px;
         }
@@ -195,16 +197,38 @@
     <div class="glow-2"></div>
     <div class="grid-pattern"></div>
 
-    <!-- Left Box: Authentic Logo -->
-    <div class="logo-box">
-        <div class="logo-wrapper">
-            <img src="logo-transparent.png" alt="Punto Clave El Salvador" class="logo-img">
-        </div>
+    <!-- Left side: Clean Integrated Vector SVG Logo -->
+    <div class="brand-left">
+        <svg class="logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="pin-blue-c" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#0284c7" />
+                    <stop offset="50%" stop-color="#0369a1" />
+                    <stop offset="100%" stop-color="#0284c7" />
+                </linearGradient>
+                <linearGradient id="pin-gold-c" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#ffe066" />
+                    <stop offset="50%" stop-color="#ffb300" />
+                    <stop offset="100%" stop-color="#ff8f00" />
+                </linearGradient>
+            </defs>
+            <path d="M50 92C43.5 92 18 63 18 42C18 24.3 32.3 10 50 10C67.7 10 82 24.3 82 42C82 63 56.5 92 50 92Z" 
+                  fill="url(#pin-blue-c)" 
+                  stroke="url(#pin-gold-c)" 
+                  stroke-width="3.5" 
+                  stroke-linejoin="round"/>
+            <circle cx="50" cy="42" r="18" fill="#e0f2fe" stroke="url(#pin-gold-c)" stroke-width="2.5"/>
+            <circle cx="50" cy="37" r="4.5" fill="url(#pin-gold-c)" />
+            <polygon points="46 40 54 40 56 51 44 51" fill="url(#pin-gold-c)" />
+        </svg>
+
+        <h1 class="brand-title">Punto Clave</h1>
+        <div class="brand-sub">EL SALVADOR</div>
     </div>
 
-    <!-- Right Box: Business Info -->
-    <div class="info-container">
-        <div class="brand-badge">📍 Chalchuapa / El Salvador</div>
+    <!-- Right side: Business Info -->
+    <div class="info-right">
+        <div class="location-badge">📍 Chalchuapa / El Salvador</div>
         <h1 class="headline">HARDWARE & TECNOLOGÍA</h1>
         <p class="sub-headline">Tu tienda de confianza en accesorios, componentes y electrónicos</p>
 

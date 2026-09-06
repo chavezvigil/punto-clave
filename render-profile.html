@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Facebook Profile Render</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Outfit:wght@700;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Outfit:wght@700;800;900&display=swap');
         
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
@@ -25,9 +25,9 @@
             position: absolute;
             width: 650px;
             height: 650px;
-            background: radial-gradient(circle, rgba(6, 182, 212, 0.22) 0%, rgba(0, 0, 0, 0) 70%);
-            top: -120px;
-            left: -120px;
+            background: radial-gradient(circle, rgba(2, 132, 199, 0.25) 0%, rgba(0, 0, 0, 0) 70%);
+            top: -100px;
+            left: -100px;
             border-radius: 50%;
         }
 
@@ -35,59 +35,65 @@
             position: absolute;
             width: 600px;
             height: 600px;
-            background: radial-gradient(circle, rgba(255, 179, 0, 0.18) 0%, rgba(0, 0, 0, 0) 70%);
-            bottom: -120px;
-            right: -120px;
+            background: radial-gradient(circle, rgba(255, 179, 0, 0.20) 0%, rgba(0, 0, 0, 0) 70%);
+            bottom: -100px;
+            right: -100px;
             border-radius: 50%;
         }
 
-        /* Circular Avatar Card */
-        .avatar-card {
+        /* Avatar Safe Frame */
+        .avatar-container {
             width: 720px;
             height: 720px;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 2px solid rgba(255, 255, 255, 0.15);
-            border-radius: 50%;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.25);
             position: relative;
             z-index: 10;
-            padding: 50px;
+            text-align: center;
         }
 
-        .logo-wrapper {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
-            border-radius: 40px;
+        /* Clean Vector SVG Logo */
+        .logo-svg {
+            width: 260px;
+            height: 260px;
+            filter: drop-shadow(0 15px 35px rgba(2, 132, 199, 0.4)) drop-shadow(0 0 15px rgba(255, 179, 0, 0.3));
+            margin-bottom: 24px;
         }
 
-        .logo-img {
-            max-width: 520px;
-            max-height: 380px;
-            object-fit: contain;
-            filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.35)) drop-shadow(0 15px 30px rgba(0, 0, 0, 0.7));
-        }
-
-        .tagline {
-            margin-top: 30px;
+        .brand-title {
             font-family: 'Outfit', sans-serif;
-            font-size: 26px;
+            font-size: 68px;
+            font-weight: 900;
+            color: #ffffff;
+            letter-spacing: -1.5px;
+            line-height: 1;
+            margin-bottom: 8px;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .brand-sub {
+            font-family: 'Inter', sans-serif;
+            font-size: 24px;
             font-weight: 800;
-            letter-spacing: 6px;
             color: #38bdf8;
+            letter-spacing: 10px;
             text-transform: uppercase;
-            text-shadow: 0 2px 12px rgba(56, 189, 248, 0.5);
-            border-top: 1px solid rgba(56, 189, 248, 0.3);
-            padding-top: 18px;
+            margin-bottom: 30px;
+        }
+
+        .tagline-badge {
+            padding: 10px 28px;
+            background: rgba(6, 182, 212, 0.15);
+            border: 1.5px solid rgba(6, 182, 212, 0.4);
+            border-radius: 30px;
+            color: #7dd3fc;
+            font-size: 17px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         }
     </style>
 </head>
@@ -95,11 +101,34 @@
     <div class="glow-cyan"></div>
     <div class="glow-gold"></div>
 
-    <div class="avatar-card">
-        <div class="logo-wrapper">
-            <img src="logo-transparent.png" alt="Punto Clave Logo" class="logo-img">
-        </div>
-        <div class="tagline">HARDWARE & TECNOLOGÍA</div>
+    <div class="avatar-container">
+        <!-- Exact Web Vector Logo SVG -->
+        <svg class="logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="pin-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#0284c7" />
+                    <stop offset="50%" stop-color="#0369a1" />
+                    <stop offset="100%" stop-color="#0284c7" />
+                </linearGradient>
+                <linearGradient id="pin-gold" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#ffe066" />
+                    <stop offset="50%" stop-color="#ffb300" />
+                    <stop offset="100%" stop-color="#ff8f00" />
+                </linearGradient>
+            </defs>
+            <path d="M50 92C43.5 92 18 63 18 42C18 24.3 32.3 10 50 10C67.7 10 82 24.3 82 42C82 63 56.5 92 50 92Z" 
+                  fill="url(#pin-blue)" 
+                  stroke="url(#pin-gold)" 
+                  stroke-width="3.5" 
+                  stroke-linejoin="round"/>
+            <circle cx="50" cy="42" r="18" fill="#e0f2fe" stroke="url(#pin-gold)" stroke-width="2.5"/>
+            <circle cx="50" cy="37" r="4.5" fill="url(#pin-gold)" />
+            <polygon points="46 40 54 40 56 51 44 51" fill="url(#pin-gold)" />
+        </svg>
+
+        <h1 class="brand-title">Punto Clave</h1>
+        <div class="brand-sub">EL SALVADOR</div>
+        <div class="tagline-badge">HARDWARE & TECNOLOGÍA</div>
     </div>
 </body>
 </html>

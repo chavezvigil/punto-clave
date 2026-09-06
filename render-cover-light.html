@@ -11,14 +11,14 @@
         body {
             width: 1640px;
             height: 624px;
-            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);
+            background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 50%, #e2e8f0 100%);
             display: flex;
             align-items: center;
             justify-content: space-between;
             font-family: 'Inter', sans-serif;
             position: relative;
             overflow: hidden;
-            padding: 40px 80px;
+            padding: 40px 90px;
             color: #0f172a;
         }
 
@@ -37,7 +37,7 @@
             position: absolute;
             width: 650px;
             height: 650px;
-            background: radial-gradient(circle, rgba(234, 179, 8, 0.15) 0%, rgba(0,0,0,0) 70%);
+            background: radial-gradient(circle, rgba(255, 179, 0, 0.15) 0%, rgba(0,0,0,0) 70%);
             bottom: -180px;
             right: 80px;
             border-radius: 50%;
@@ -52,50 +52,62 @@
             pointer-events: none;
         }
 
-        /* Left Column - Real Logo Card */
-        .logo-box {
+        /* Left Column - Clean Integrated SVG Logo Lockup */
+        .brand-left {
             position: relative;
             z-index: 10;
-            width: 520px;
-            height: 480px;
-            background: rgba(255, 255, 255, 0.75);
-            backdrop-filter: blur(25px);
-            -webkit-backdrop-filter: blur(25px);
-            border: 2px solid rgba(255, 255, 255, 0.9);
-            border-radius: 28px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08), inset 0 1px 0 #ffffff;
-            padding: 30px;
+            width: 480px;
+            text-align: center;
         }
 
-        .logo-img {
-            max-width: 440px;
-            max-height: 360px;
-            object-fit: contain;
-            filter: drop-shadow(0 8px 16px rgba(15, 23, 42, 0.12));
+        .logo-svg {
+            width: 240px;
+            height: 240px;
+            filter: drop-shadow(0 12px 28px rgba(2, 132, 199, 0.25));
+            margin-bottom: 16px;
         }
 
-        /* Right Column - Brand Information & Offerings */
-        .info-container {
+        .brand-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 56px;
+            font-weight: 900;
+            color: #0f172a;
+            letter-spacing: -1px;
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+
+        .brand-sub {
+            font-family: 'Inter', sans-serif;
+            font-size: 20px;
+            font-weight: 800;
+            color: #0284c7;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+        }
+
+        /* Right Column - Store Offerings & Info */
+        .info-right {
             position: relative;
             z-index: 10;
-            width: 880px;
+            width: 900px;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
 
-        .brand-badge {
+        .location-badge {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(2, 132, 199, 0.1);
+            background: rgba(2, 132, 199, 0.08);
             border: 1px solid rgba(2, 132, 199, 0.3);
             color: #0284c7;
-            padding: 8px 20px;
+            padding: 8px 22px;
             border-radius: 30px;
             font-size: 15px;
             font-weight: 700;
@@ -107,7 +119,7 @@
 
         .headline {
             font-family: 'Outfit', sans-serif;
-            font-size: 52px;
+            font-size: 54px;
             font-weight: 900;
             line-height: 1.1;
             margin-bottom: 12px;
@@ -122,7 +134,7 @@
             margin-bottom: 28px;
         }
 
-        /* Offerings Grid */
+        /* Feature Pills Grid */
         .features-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -131,30 +143,30 @@
         }
 
         .feature-pill {
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.85);
             border: 1px solid rgba(203, 213, 225, 0.8);
             border-radius: 14px;
-            padding: 12px 18px;
+            padding: 14px 20px;
             display: flex;
             align-items: center;
             gap: 12px;
-            font-size: 16px;
+            font-size: 17px;
             font-weight: 600;
             color: #1e293b;
             box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
         }
 
         .feature-icon {
-            font-size: 20px;
+            font-size: 22px;
         }
 
-        /* Footer CTA Bar */
+        /* CTA Bar */
         .cta-bar {
             display: flex;
             align-items: center;
             justify-content: space-between;
             background: #0f172a;
-            border: 1px solid rgba(234, 179, 8, 0.4);
+            border: 1px solid rgba(255, 179, 0, 0.4);
             border-radius: 18px;
             padding: 16px 24px;
             box-shadow: 0 10px 25px rgba(15, 23, 42, 0.2);
@@ -163,8 +175,8 @@
 
         .url-text {
             font-family: 'Outfit', sans-serif;
-            font-size: 20px;
-            font-weight: 700;
+            font-size: 21px;
+            font-weight: 800;
             color: #facc15;
             letter-spacing: 0.5px;
         }
@@ -184,14 +196,38 @@
     <div class="glow-2"></div>
     <div class="grid-pattern"></div>
 
-    <!-- Left Box: Authentic Logo -->
-    <div class="logo-box">
-        <img src="logo.png" alt="Punto Clave El Salvador" class="logo-img">
+    <!-- Left side: Clean Integrated Vector SVG Logo -->
+    <div class="brand-left">
+        <svg class="logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="pin-blue-lc" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#0284c7" />
+                    <stop offset="50%" stop-color="#0369a1" />
+                    <stop offset="100%" stop-color="#0284c7" />
+                </linearGradient>
+                <linearGradient id="pin-gold-lc" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#ffe066" />
+                    <stop offset="50%" stop-color="#ffb300" />
+                    <stop offset="100%" stop-color="#ff8f00" />
+                </linearGradient>
+            </defs>
+            <path d="M50 92C43.5 92 18 63 18 42C18 24.3 32.3 10 50 10C67.7 10 82 24.3 82 42C82 63 56.5 92 50 92Z" 
+                  fill="url(#pin-blue-lc)" 
+                  stroke="url(#pin-gold-lc)" 
+                  stroke-width="3.5" 
+                  stroke-linejoin="round"/>
+            <circle cx="50" cy="42" r="18" fill="#e0f2fe" stroke="url(#pin-gold-lc)" stroke-width="2.5"/>
+            <circle cx="50" cy="37" r="4.5" fill="url(#pin-gold-lc)" />
+            <polygon points="46 40 54 40 56 51 44 51" fill="url(#pin-gold-lc)" />
+        </svg>
+
+        <h1 class="brand-title">Punto Clave</h1>
+        <div class="brand-sub">EL SALVADOR</div>
     </div>
 
-    <!-- Right Box: Business Info -->
-    <div class="info-container">
-        <div class="brand-badge">📍 Chalchuapa / El Salvador</div>
+    <!-- Right side: Business Info -->
+    <div class="info-right">
+        <div class="location-badge">📍 Chalchuapa / El Salvador</div>
         <h1 class="headline">HARDWARE & TECNOLOGÍA</h1>
         <p class="sub-headline">Tu tienda de confianza en accesorios, componentes y electrónicos</p>
 
