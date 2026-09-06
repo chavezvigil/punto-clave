@@ -110,7 +110,7 @@ window.PRODUCTS = [
         "originalPrice": null,
         "category": "Juguetes",
         "condition": "Usado - Buen estado",
-        "availability": "Agotado",
+        "availability": "Oculto",
         "date": "2026-06-28",
         "description": "¡Diversión para los pequeños con este clásico juguete Fisher-Price! 🚗✨ Estación de parqueo con rampas para jugar con carritos, estimular la imaginación y crear diferentes recorridos.\n\n🎯 Características:\n✓ Marca Fisher-Price\n✓ Diseño con varios niveles y rampa\n✓ Material plástico resistente y duradero\n✓ Ideal para juego infantil\n✓ Buen estado general, limpio y listo para usarse\n\nPerfecto para niños que disfrutan jugar con carros y crear sus propias aventuras.",
         "images": [
@@ -277,59 +277,5 @@ window.PRODUCTS = [
             "productos/My%20Little%20Pony/pony.jpg",
             "productos/My%20Little%20Pony/WhatsApp%20Image%202026-08-04%20at%2012.31.04%20PM.jpeg"
         ]
-    },
-    {
-        "id":  "redmi-9",
-        "folderName":  "Redmi 9",
-        "title":  "Xiaomi Redmi 9 – 64 GB – Liberado",
-        "price":  50,
-        "originalPrice":  65,
-        "category":  "Tecnología",
-        "condition":  "Usado - Buen estado",
-        "availability":  "Oculto",
-        "date":  "2026-06-14",
-        "description":  "Vendo Xiaomi Redmi 9 en buen estado general y funcionando correctamente.\n\nEspecificaciones:\n✓ 4 GB RAM / 64 GB almacenamiento\n✓ Android 12\n✓ Cámara, carga y táctil funcionando perfectamente\n✓ Se entrega formateado y listo para usar\n\nPrecio original $65, ahora en oferta por $50.",
-        "images":  [
-                       "productos/Redmi%209/20260614_102129.jpg",
-                       "productos/Redmi%209/20260614_102134.jpg",
-                       "productos/Redmi%209/20260614_102137.jpg",
-                       "productos/Redmi%209/20260614_102141.jpg",
-                       "productos/Redmi%209/20260614_102149.jpg",
-                       "productos/Redmi%209/20260614_102158.jpg",
-                       "productos/Redmi%209/20260614_102209.jpg",
-                       "productos/Redmi%209/20260614_103027.jpg",
-                       "productos/Redmi%209/20260614_103031.jpg",
-                       "productos/Redmi%209/20260614_103133.jpg",
-                       "productos/Redmi%209/20260614_103148.jpg",
-                       "productos/Redmi%209/20260614_103208.jpg",
-                       "productos/Redmi%209/20260614_103221.jpg",
-                       "productos/Redmi%209/20260614_103237.jpg",
-                       "productos/Redmi%209/20260614_103749.jpg",
-                       "productos/Redmi%209/20260614_103750.jpg"
-                   ]
-    },
-    {
-        "id":  "s22",
-        "folderName":  "s22",
-        "title":  "Samsung Galaxy S22 128 GB / 8 GB RAM – Liberado",
-        "price":  125,
-        "originalPrice":  null,
-        "category":  "Tecnología",
-        "condition":  "Usado - Buen estado",
-        "availability":  "Oculto",
-        "date":  "2026-06-13",
-        "description":  "La pantalla presenta una línea vertical color rosa (visible en fotografías). Fuera de ese detalle estético/visual, el teléfono funciona con normalidad.\n\nEspecificaciones:\n✓ Modelo: Samsung Galaxy S22 (SM-S901F)\n✓ Almacenamiento: 128 GB\n✓ RAM: 8 GB\n✓ Dual SIM\n✓ Cámara principal 50 MP + ultra gran angular + telefoto\n✓ Cámara frontal 10 MP\n✓ Carga rápida\n✓ Pantalla Dynamic AMOLED 120 Hz\n✓ Liberado\n\nFísicamente impecable y todo su sistema operativo, cámaras y batería están al 100%.",
-        "images":  [
-                       "productos/s22/20260613_101048.jpg",
-                       "productos/s22/20260613_101102.jpg",
-                       "productos/s22/20260613_101135.jpg",
-                       "productos/s22/20260613_101218.jpg",
-                       "productos/s22/20260629_085415.jpg",
-                       "productos/s22/20260629_085418.jpg",
-                       "productos/s22/20260629_085421.jpg",
-                       "productos/s22/20260629_085428.jpg",
-                       "productos/s22/20260629_090421.jpg",
-                       "productos/s22/20260629_090438.jpg"
-                   ]
     }
 ];
