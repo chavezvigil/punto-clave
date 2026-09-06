@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Facebook Profile Render</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Outfit:wght@700;800&display=swap');
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            width: 800px;
+            height: 800px;
+            background: linear-gradient(135deg, #090d16 0%, #0f172a 50%, #1e293b 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Inter', sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Ambient Glow Highlights */
+        .glow-cyan {
+            position: absolute;
+            width: 650px;
+            height: 650px;
+            background: radial-gradient(circle, rgba(6, 182, 212, 0.22) 0%, rgba(0, 0, 0, 0) 70%);
+            top: -120px;
+            left: -120px;
+            border-radius: 50%;
+        }
+
+        .glow-gold {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255, 179, 0, 0.18) 0%, rgba(0, 0, 0, 0) 70%);
+            bottom: -120px;
+            right: -120px;
+            border-radius: 50%;
+        }
+
+        /* Circular Avatar Card */
+        .avatar-card {
+            width: 720px;
+            height: 720px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 2px solid rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+            position: relative;
+            z-index: 10;
+            padding: 50px;
+        }
+
+        .logo-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+            border-radius: 40px;
+        }
+
+        .logo-img {
+            max-width: 520px;
+            max-height: 380px;
+            object-fit: contain;
+            filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.35)) drop-shadow(0 15px 30px rgba(0, 0, 0, 0.7));
+        }
+
+        .tagline {
+            margin-top: 30px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 26px;
+            font-weight: 800;
+            letter-spacing: 6px;
+            color: #38bdf8;
+            text-transform: uppercase;
+            text-shadow: 0 2px 12px rgba(56, 189, 248, 0.5);
+            border-top: 1px solid rgba(56, 189, 248, 0.3);
+            padding-top: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="glow-cyan"></div>
+    <div class="glow-gold"></div>
+
+    <div class="avatar-card">
+        <div class="logo-wrapper">
+            <img src="logo-transparent.png" alt="Punto Clave Logo" class="logo-img">
+        </div>
+        <div class="tagline">HARDWARE & TECNOLOGÍA</div>
+    </div>
+</body>
+</html>
