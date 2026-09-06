@@ -64,7 +64,7 @@ window.PRODUCTS = [
         "originalPrice": 150,
         "category": "Juguetes",
         "condition": "Usado - Como nuevo",
-        "availability": "Agotado",
+        "availability": "Oculto",
         "date": "2026-06-28",
         "description": "Vendo columpio de madera de cedro, recién barnizado y muy bien cuidado. Madera resistente y de excelente calidad.\n\n✓ Estructura firme y duradera\n✓ Se puede destornillar fácilmente para transportar, guardar o instalar\n✓ Ideal para niños de 4 a 10 años\n✓ Perfecto para patio, jardín o terraza\n✓ Incluye 2 asientos\n✓ Listo para usar",
         "images": [
