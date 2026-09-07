@@ -314,7 +314,7 @@ window.PRODUCTS = [
         "originalPrice": 45,
         "category": "Electrónicos",
         "condition": "Usado - Como nuevo",
-        "availability": "Disponible",
+        "availability": "Agotado",
         "date": "2026-09-06",
         "description": "🚀 ¡Lleva el rendimiento de tu laptop al siguiente nivel con memoria original Samsung!\n\n¿Tu laptop se queda corta con multitarea, juegos o programas pesados? Esta memoria RAM Samsung 16GB DDR4 a 3200MHz es la actualización perfecta para máxima fluidez, estabilidad y rapidez.\n\nEspecificaciones técnicas:\n\nMarca: Samsung (100% Original OEM)\nCapacidad: 16 GB\nTipo: DDR4 SODIMM (para computadoras portátiles / laptops)\nVelocidad: 3200 MHz (PC4-3200AA)\nConfiguración: 2Rx8 (Dual Rank para mejor rendimiento)\nModelo exacto: M471A2K43DB1-CWE\nVoltaje: 1.2V (Bajo consumo y eficiencia térmica)\nEstado: Impecable, testeada y 100% funcional.\n\nCompatibilidad:\nIdeal para laptops gaming (HP Victus, Lenovo Legion / IdeaPad Gaming, ASUS TUF, Acer Nitro, Dell G-Series) y laptops de trabajo/oficina compatibles con memorias DDR4.\n\nBeneficios clave:\n\nElimina tirones y cuellos de botella al abrir múltiples aplicaciones o pestañas.\nExcelente para diseño, desarrollo, edición de video y gaming competitivo.\nInstalación rápida plug-and-play.",
         "images": [
