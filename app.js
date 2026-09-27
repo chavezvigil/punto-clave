@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     });
                     if (freshProducts.length > 0) {
                         state.products = freshProducts;
-                        renderCategories();
+                        buildCategories();
                         applyFilters();
                         preloadAllCatalogImages(freshProducts);
                     }
