@@ -327,7 +327,7 @@ window.PRODUCTS = [
         "folderName": "HYUNDAI VELOSTER 2014",
         "title": "HYUNDAI VELOSTER 2014",
         "price": 6000,
-        "originalPrice": null,
+        "originalPrice": 6200,
         "category": "Otros",
         "condition": "Usado - Buen estado",
         "availability": "Disponible",
